@@ -1,1 +1,11 @@
 [24-Apr-2023 03:12:50 UTC] Cron reschedule event error for hook: wp_privacy_delete_old_export_files, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"hourly","args":[],"interval":3600}
+[26-Apr-2023 03:52:29 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "" not found or invalid function name in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php:308
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-settings.php(601): do_action('after_setup_the...')
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-config.php(93): require_once('C:\\Users\\pin-d\\...')
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-load.php(50): require_once('C:\\Users\\pin-d\\...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\pin-d\\...')
+#6 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php on line 308
