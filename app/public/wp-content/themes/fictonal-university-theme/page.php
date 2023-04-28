@@ -27,18 +27,27 @@
       <?php
          }
       ?>
-
-      <div class="page-links">
-         <h2 class="page-links__title"><a href="#">About Us</a></h2>
-         <ul class="min-list">
-            <?php 
-               wp_list_pages([
-                  "title_li" => NULL,
-                  "child_of" => $parentId ? $parentId :  get_the_ID()
-               ]);  
-            ?>
-         </ul>
-      </div>
+      <?php 
+         $testArray = get_pages([
+            "child_of" => get_the_ID()
+         ]);
+         if($parentId or $testArray){
+      ?>
+         <div class="page-links">
+            <h2 class="page-links__title"><a href="<?php echo get_permalink($parentId) ?>"><?php echo get_the_title($parentId) ?></a></h2>
+            <ul class="min-list">
+               <?php 
+                  wp_list_pages([
+                     "title_li" => NULL,
+                     "child_of" => $parentId ? $parentId :  get_the_ID(),
+                     "sort_column" => "menu_order"
+                  ]);  
+               ?>
+            </ul>
+         </div>
+      <?php
+         }
+      ?>
 
       <div class="generic-content">
          <?php the_content() ?>
