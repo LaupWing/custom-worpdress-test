@@ -31,8 +31,12 @@
       <div class="page-links">
          <h2 class="page-links__title"><a href="#">About Us</a></h2>
          <ul class="min-list">
-            <li class="current_page_item"><a href="#">Our History</a></li>
-            <li><a href="#">Our Goals</a></li>
+            <?php 
+               wp_list_pages([
+                  "title_li" => NULL,
+                  "child_of" => $parentId ? $parentId :  get_the_ID()
+               ]);  
+            ?>
          </ul>
       </div>
 
