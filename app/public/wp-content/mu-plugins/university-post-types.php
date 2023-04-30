@@ -4,6 +4,7 @@ function university_post_types() {
       "rewrite" => ["slug" => "events"],
       "has_archive" => true,
       "show_in_rest" => true,
+      "supports" => ["title", "editor", "excerpt"],
       "public" => true,
       "labels" => [
          "name" => "Events",
