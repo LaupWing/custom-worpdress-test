@@ -28,7 +28,8 @@ get_header();
                   [
                      "key" => "event_date",
                      "compare" => ">=",
-                     "value" => $today
+                     "value" => $today,
+                     "type" => "numeric"
                   ]
                ]
             ]);
