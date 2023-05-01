@@ -9,3 +9,15 @@ Stack trace:
 #5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\pin-d\\...')
 #6 {main}
   thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php on line 308
+[01-May-2023 08:31:57 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function add_image_size(), 0 passed in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\functions.php on line 20 and at least 1 expected in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\media.php:291
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\functions.php(20): add_image_size()
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(308): university_features('')
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-settings.php(601): do_action('after_setup_the...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-config.php(93): require_once('C:\\Users\\pin-d\\...')
+#6 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-load.php(50): require_once('C:\\Users\\pin-d\\...')
+#7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\pin-d\\...')
+#8 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\media.php on line 291

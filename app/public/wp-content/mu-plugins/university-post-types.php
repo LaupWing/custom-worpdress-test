@@ -36,7 +36,7 @@ function university_post_types() {
       "rewrite" => ["slug" => "professor"],
       "has_archive" => true,
       "show_in_rest" => true,
-      "supports" => ["title", "editor"],
+      "supports" => ["title", "editor", "thumbnail"],
       "public" => true,
       "labels" => [
          "name" => "Professors",

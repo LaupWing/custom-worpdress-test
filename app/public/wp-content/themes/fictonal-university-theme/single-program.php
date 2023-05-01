@@ -44,12 +44,21 @@
             $title = get_the_title();
             echo "<hr class='section-break'>";
             echo "<h2 class='headline headline--medium'>{$title} Professors</h2>";
+            echo "<ul class='professor-cards'>";
             while($relatedProfessors->have_posts()) {
                $relatedProfessors->the_post();
       ?>
-         <li><a href="<?php the_permalink() ?>"><?php the_title() ?></a></li>   
+         <li class="professor-card__list-item">
+            <a class="professor-card" href="<?php the_permalink() ?>">
+               <img src="<?php the_post_thumbnail_url(); ?>" class="professor-card__image" alt="">
+               <span class="professor-card__name">
+                  <?php echo the_title(); ?>
+               </span>
+            </a>
+         </li>   
       <?php
             }
+            echo "</ul>";
          }
          wp_reset_postdata();
       ?>
