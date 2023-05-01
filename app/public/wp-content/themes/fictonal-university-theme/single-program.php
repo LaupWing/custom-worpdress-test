@@ -48,9 +48,12 @@
                ]
             ]
          ]);
-
-         while($homepageEvents->have_posts()) {
-            $homepageEvents->the_post();
+         if($homepageEvents->have_posts()){
+            $title = get_the_title();
+            echo "<hr class='section-break'>";
+            echo "<h2 class='headline headline--medium'>Upcoming {$title} Events</h2>";
+            while($homepageEvents->have_posts()) {
+               $homepageEvents->the_post();
       ?>
       <div class="event-summary">
          <a class="event-summary__date t-center" href="#">
@@ -76,6 +79,7 @@
       </div>
    </div>
 <?php
+         }
       }
    }
 ?>
