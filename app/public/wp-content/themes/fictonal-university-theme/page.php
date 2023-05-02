@@ -5,7 +5,8 @@ get_header();
 while (have_posts()) {
    the_post(); 
    pageBanner([
-      "title" => the_title()
+      "title" => "Hello there this is the title",
+      "photo" => ""
    ]);
 ?>
 
