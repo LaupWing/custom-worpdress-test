@@ -21,3 +21,10 @@ Stack trace:
 #7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\pin-d\\...')
 #8 {main}
   thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\media.php on line 291
+[02-May-2023 03:43:15 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\single-professor.php:10
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\template-loader.php(106): include()
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-blog-header.php(19): require_once('C:\\Users\\pin-d\\...')
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
+#3 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\single-professor.php on line 10
