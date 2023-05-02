@@ -1,3 +1,33 @@
+<li><em>2023-05-02 03:52:52</em>
+APPLY FILTER <strong>sirsc_custom_upload_rule</strong> ( {"settings":"...","id":0,"type":"","parent_id":5,"parent_type":"page"} )</li>
+<li><em>2023-05-02 03:51:30</em>
+DO ACTION <b>sirsc_attachment_images_ready</b> ( {"meta":"...","id":69} )</li>
+<li><em>2023-05-02 03:51:30</em>
+APPLY FILTER <strong>sirsc_computed_metadata_after_upload</strong> ( {"meta":"...","id":69} )</li>
+<li><em>2023-05-02 03:51:24</em>
+APPLY FILTER <strong>sirsc_custom_upload_rule</strong> ( {"settings":"...","id":69,"type":"attachment","parent_id":5,"parent_type":"page"} )</li>
+<li><em>2023-05-02 03:51:24</em>
+DO ACTION <b>sirsc_image_processed</b> ( {"id":69,"size_name":"pageBanner"} )</li>
+<li><em>2023-05-02 03:51:24</em>
+DO ACTION <b>sirsc_image_processed</b> ( {"id":69,"size_name":"professorPortrait"} )</li>
+<li><em>2023-05-02 03:51:23</em>
+DO ACTION <b>sirsc_image_processed</b> ( {"id":69,"size_name":"professorLandscape"} )</li>
+<li><em>2023-05-02 03:51:23</em>
+DO ACTION <b>sirsc_image_processed</b> ( {"id":69,"size_name":"2048x2048"} )</li>
+<li><em>2023-05-02 03:51:21</em>
+DO ACTION <b>sirsc_image_processed</b> ( {"id":69,"size_name":"1536x1536"} )</li>
+<li><em>2023-05-02 03:51:20</em>
+DO ACTION <b>sirsc_image_processed</b> ( {"id":69,"size_name":"large"} )</li>
+<li><em>2023-05-02 03:51:19</em>
+DO ACTION <b>sirsc_image_processed</b> ( {"id":69,"size_name":"medium_large"} )</li>
+<li><em>2023-05-02 03:51:18</em>
+DO ACTION <b>sirsc_image_processed</b> ( {"id":69,"size_name":"medium"} )</li>
+<li><em>2023-05-02 03:51:18</em>
+DO ACTION <b>sirsc_image_processed</b> ( {"id":69,"size_name":"thumbnail"} )</li>
+<li><em>2023-05-02 03:51:17</em>
+APPLY FILTER <strong>sirsc_custom_upload_rule</strong> ( {"settings":"...","id":69,"type":"attachment","parent_id":5,"parent_type":"page"} )</li>
+<li><em>2023-05-02 03:50:49</em>
+APPLY FILTER <strong>sirsc_custom_upload_rule</strong> ( {"settings":"...","id":0,"type":"","parent_id":5,"parent_type":"page"} )</li>
 <li><em>2023-05-02 03:38:58</em>
 APPLY FILTER <strong>sirsc_custom_upload_rule</strong> ( {"settings":"...","id":0,"type":"","parent_id":61,"parent_type":"professor"} )</li>
 <li><em>2023-05-02 03:38:53</em>
