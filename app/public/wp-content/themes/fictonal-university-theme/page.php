@@ -1,12 +1,10 @@
 <?php
-
 get_header();
 
 while (have_posts()) {
    the_post(); 
    pageBanner([
-      "title" => "Hello there this is the title",
-      "photo" => ""
+      "title" => "Hello there this is the title"
    ]);
 ?>
 

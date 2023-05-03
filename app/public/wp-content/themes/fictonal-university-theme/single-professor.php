@@ -3,9 +3,7 @@
 <?php 
    while(have_posts()) {
       the_post(); 
-      pageBanner([
-         "title" => the_title()
-      ]);
+      pageBanner();
 ?>
    
    
