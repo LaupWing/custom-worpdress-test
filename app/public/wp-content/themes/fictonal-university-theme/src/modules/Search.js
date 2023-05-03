@@ -7,12 +7,22 @@ class Search {
       this.searchOverlay = $(".search-overlay")
       this.events()
       this.isOverlayOpen = false
+      this.searchField = $("#search-term")
+      this.typingTimer
    }
 
    events(){
       this.openButton.on("click", this.openOverlay.bind(this))
       this.closeButton.on("click", this.closeOverlay.bind(this))
       $(document).on("keyup", this.keyPressDispatcher.bind(this))
+      this.searchField.on("keydown", this.typingLogic.bind(this))
+   }
+
+   typingLogic() {
+      clearTimeout(this.typingTimer)
+      this.typingTimer = setTimeout(() => {
+
+      }, 1000)
    }
 
    keyPressDispatcher(e){
