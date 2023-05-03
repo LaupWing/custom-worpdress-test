@@ -2,7 +2,6 @@
 engine = On
 {{#if os.windows}}
 extension_dir="{{extensionsDir}}"
-sys_temp_dir="C:\Windows\TEMP"
 {{/if}}
 
 ; Maxes
@@ -18,13 +17,13 @@ output_buffering = 4096
 error_reporting = E_ALL & ~E_DEPRECATED
 error_log = "{{logs.errorLog}}"
 log_errors = On
-{{!-- log_errors_max_len = 1024 --}}
+log_errors_max_len = 1024
 display_errors = On
 display_startup_errors = On
 ignore_repeated_errors = Off
 ignore_repeated_source = Off
 report_memleaks = On
-{{!-- track_errors = Off --}}
+track_errors = Off
 html_errors = On
 
 ; Sendmail
@@ -73,7 +72,6 @@ upload_max_filesize = 300M
 allow_url_fopen = On
 allow_url_include = Off
 default_socket_timeout = 60
-openssl.cafile="{{wpCaBundlePath}}"
 
 {{#if os.windows}}
 ; Load extensions
@@ -92,7 +90,6 @@ extension=php_xsl.dll
 extension=php_soap.dll
 extension=php_mysqli.dll
 extension=php_pdo_mysql.dll
-extension=php_fileinfo.dll
 {{/if}}
 
 [MySQL]
@@ -125,18 +122,10 @@ mysqli.reconnect = Off
 pdo_mysql.default_socket = "{{mysql.socket}}"
 pdo_mysql.default_port = {{mysql.port}}
 
-{{#if intelChipMac}}
-[imagick]
-extension = {{extensionsDir}}/imagick.so
-{{/if}}
-
 [Date]
 [filter]
 [iconv]
 [intl]
-{{#if os.windows}}
-extension = php_intl.dll
-{{/if}}
 [sqlite]
 [sqlite3]
 [Pcre]
@@ -205,7 +194,6 @@ ldap.max_links = -1
 [mcrypt]
 [dba]
 
-{{#unless apache}}
 [opcache]
 {{#if os.windows}}
 zend_extension = php_opcache.dll
@@ -215,7 +203,6 @@ zend_extension = {{extensionsDir}}/opcache.so
 
 opcache.enable=1
 opcache.enable_cli=1
-{{/unless}}
 
 [xdebug]
 {{#if os.windows}}
@@ -224,12 +211,8 @@ zend_extension = php_xdebug.dll
 zend_extension = {{extensionsDir}}/xdebug.so
 {{/if}}
 
-{{#if xdebugEnabled}}
-xdebug.mode=debug,develop
-{{else}}
-xdebug.mode=off
-{{/if}}
-xdebug.client_port=9003
+xdebug.mode=debug
+xdebug.client_port="9000"
 xdebug.start_with_request=yes
 xdebug.discover_client_host=yes
 
