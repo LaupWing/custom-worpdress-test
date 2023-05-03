@@ -41,7 +41,9 @@ class Search {
    }
 
    getResults() {
-      this.resultsDiv.html("Imagine real search results here")
+      $.getJSON("http://tutorial-college.local/wp-json/wp/v2/posts?search=" + this.searchField.val(), function(e){
+         console.log(e)
+      })
    }
 
    keyPressDispatcher(e){
