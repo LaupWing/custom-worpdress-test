@@ -54,6 +54,8 @@ class Search {
                `<p>No general information matches that search.</p>`
             }
          `)
+
+         this.isSpinnerVisible = false
       })
    }
 
