@@ -45,11 +45,14 @@ class Search {
          
          this.resultsDiv.html(`
             <h2 class="search-overlay__section-title">General information</h2>
-            <ul class="link-list min-list">
-               ${posts.map(post => `
-                  <li><a href="${post.link}">${post.title.rendered}</a></li>
-               `).join("")}
-            </ul>
+            ${posts.length > 0 ? 
+               `<ul class="link-list min-list">
+                  ${posts.map(post => `
+                     <li><a href="${post.link}">${post.title.rendered}</a></li>
+                  `).join("")}
+               </ul>` :
+               `<p>No general information matches that search.</p>`
+            }
          `)
       })
    }
