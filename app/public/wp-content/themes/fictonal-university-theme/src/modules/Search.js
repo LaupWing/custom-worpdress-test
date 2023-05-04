@@ -41,8 +41,16 @@ class Search {
    }
 
    getResults() {
-      $.getJSON("http://tutorial-college.local/wp-json/wp/v2/posts?search=" + this.searchField.val(), function(e){
-         console.log(e)
+      $.getJSON("http://tutorial-college.local/wp-json/wp/v2/posts?search=" + this.searchField.val(), (posts) => {
+         
+         this.resultsDiv.html(`
+            <h2 class="search-overlay__section-title">General information</h2>
+            <ul class="link-list min-list">
+               ${posts.map(post => `
+                  <li><a href="${post.link}">${post.title.rendered}</a></li>
+               `).join("")}
+            </ul>
+         `)
       })
    }
 
