@@ -44,11 +44,13 @@ class Search {
    }
 
    async getResults() {
-      const posts = await $.getJSON(universityData.root_url + "/wp-json/wp/v2/posts?search=" + this.searchField.val())
-      
+      const posts = $.getJSON(universityData.root_url + "/wp-json/wp/v2/posts?search=" + this.searchField.val())
+      const pages = $.getJSON(universityData.root_url + "/wp-json/wp/v2/pages?search=" + this.searchField.val())
+      const results = await Promise.all([posts, pages])
+
       this.resultsDiv.html(`
          <h2 class="search-overlay__section-title">General information</h2>
-         ${posts.length > 0 ? 
+         ${results.flat().length > 0 ? 
             `<ul class="link-list min-list">
                ${posts.map(post => `
                   <li><a href="${post.link}">${post.title.rendered}</a></li>
