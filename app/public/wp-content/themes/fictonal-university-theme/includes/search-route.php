@@ -10,5 +10,9 @@ function universityRegisterSearch(){
 }
 
 function universitySerachResults() {
-   return "Congratulations, you created a route";
+   return [
+      "red",
+      "orange",
+      "yellow"
+   ];
 }
