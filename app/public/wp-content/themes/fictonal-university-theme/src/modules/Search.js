@@ -53,7 +53,7 @@ class Search {
          ${results.flat().length > 0 ? 
             `<ul class="link-list min-list">
                ${results.flat().map(result => `
-                  <li><a href="${result.link}">${result.title.rendered}</a></li>
+                  <li><a href="${result.link}">${result.title.rendered}</a> ${result.authorName ? `By ${result.authorName}` : ""}</li>
                `).join("")}
             </ul>` :
             `<p>No general information matches that search.</p>`
