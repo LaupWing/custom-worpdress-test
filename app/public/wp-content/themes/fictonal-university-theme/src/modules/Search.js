@@ -43,22 +43,21 @@ class Search {
       this.previousValue = this.searchField.val()
    }
 
-   getResults() {
-      $.getJSON(universityData.root_url + "/wp-json/wp/v2/posts?search=" + this.searchField.val(), (posts) => {
-         this.resultsDiv.html(`
-            <h2 class="search-overlay__section-title">General information</h2>
-            ${posts.length > 0 ? 
-               `<ul class="link-list min-list">
-                  ${posts.map(post => `
-                     <li><a href="${post.link}">${post.title.rendered}</a></li>
-                  `).join("")}
-               </ul>` :
-               `<p>No general information matches that search.</p>`
-            }
-         `)
-
-         this.isSpinnerVisible = false
-      })
+   async getResults() {
+      const posts = await $.getJSON(universityData.root_url + "/wp-json/wp/v2/posts?search=" + this.searchField.val())
+      
+      this.resultsDiv.html(`
+         <h2 class="search-overlay__section-title">General information</h2>
+         ${posts.length > 0 ? 
+            `<ul class="link-list min-list">
+               ${posts.map(post => `
+                  <li><a href="${post.link}">${post.title.rendered}</a></li>
+               `).join("")}
+            </ul>` :
+            `<p>No general information matches that search.</p>`
+         }
+      `)
+      this.isSpinnerVisible = false
    }
 
    keyPressDispatcher(e){
