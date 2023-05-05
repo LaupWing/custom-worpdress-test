@@ -44,22 +44,48 @@ class Search {
    }
 
    async getResults() {
-      const posts = $.getJSON(universityData.root_url + "/wp-json/wp/v2/posts?search=" + this.searchField.val())
-      const pages = $.getJSON(universityData.root_url + "/wp-json/wp/v2/pages?search=" + this.searchField.val())
-      const results = await Promise.all([posts, pages])
-
-      this.resultsDiv.html(`
-         <h2 class="search-overlay__section-title">General information</h2>
-         ${results.flat().length > 0 ? 
-            `<ul class="link-list min-list">
-               ${results.flat().map(result => `
-                  <li><a href="${result.link}">${result.title.rendered}</a> ${result.authorName ? `By ${result.authorName}` : ""}</li>
-               `).join("")}
-            </ul>` :
-            `<p>No general information matches that search.</p>`
-         }
-      `)
-      this.isSpinnerVisible = false
+      $.getJSON(universityData.root_url + "/wp-json/university/v1/search?term=" + this.searchField.val(), (results) => {
+         this.resultsDiv.html(`
+            <div class="row">
+               <div class="one-third">
+                  <h2 class="search-overlay__section-title">General Information</h2>
+                  ${results.generalInfo.length ? 
+                     `<ul class="link-list min-list">
+                        ${results.generalInfo.map(result => `
+                           <li><a href="${result.permalink}">${result.title}</a> ${result.authorName ? `By ${result.authorName}` : ""}</li>
+                        `).join("")}
+                     </ul>` :
+                     `<p>No general information matches that search.</p>`
+                  }
+               </div>
+               <div class="one-third">
+                  <h2 class="search-overlay__section-title">Programs</h2>
+                  ${results.programs.length ? 
+                     `<ul class="link-list min-list">
+                        ${results.programs.map(result => `
+                           <li><a href="${result.permalink}">${result.title}</a></li>
+                        `).join("")}
+                     </ul>` :
+                     `<p>No programs matches that search. <a href="${universityData.root_url}/programs">View all programs</a> </p>`
+                  }
+                  <h2 class="search-overlay__section-title">Professors</h2>
+               </div>
+               <div class="one-third">
+                  <h2 class="search-overlay__section-title">Campuses</h2>
+                  ${results.campuses.length ? 
+                     `<ul class="link-list min-list">
+                        ${results.campuses.map(result => `
+                           <li><a href="${result.permalink}">${result.title}</a></li>
+                        `).join("")}
+                     </ul>` :
+                     `<p>No campuses matches that search. <a href="${universityData.root_url}/campuses">View all campuses</a></p>`
+                  }
+                  <h2 class="search-overlay__section-title">Events</h2>
+               </div>
+            </div>
+         `)
+         this.isSpinnerVisible = false
+      })
    }
 
    keyPressDispatcher(e){
