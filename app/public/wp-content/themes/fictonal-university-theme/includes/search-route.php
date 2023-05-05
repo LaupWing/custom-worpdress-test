@@ -10,9 +10,20 @@ function universityRegisterSearch(){
 }
 
 function universitySerachResults() {
-   return [
-      "red",
-      "orange",
-      "yellow"
-   ];
+   $proffessors = new WP_Query([
+      "post_type" => "professor"
+   ]);
+
+   $proffessorResults = [];
+   while($proffessors->have_posts()) {
+      $proffessors->the_post();
+      array_push($proffessorResults, [
+         "title" => get_the_title(),
+         "id" => get_the_ID(),
+         "permalink" => get_the_permalink(),
+         "" => ""
+      ]);
+   } 
+
+   return $proffessorResults;
 }
