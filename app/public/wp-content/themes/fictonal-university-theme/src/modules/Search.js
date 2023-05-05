@@ -52,8 +52,8 @@ class Search {
          <h2 class="search-overlay__section-title">General information</h2>
          ${results.flat().length > 0 ? 
             `<ul class="link-list min-list">
-               ${posts.map(post => `
-                  <li><a href="${post.link}">${post.title.rendered}</a></li>
+               ${results.flat().map(result => `
+                  <li><a href="${result.link}">${result.title.rendered}</a></li>
                `).join("")}
             </ul>` :
             `<p>No general information matches that search.</p>`
