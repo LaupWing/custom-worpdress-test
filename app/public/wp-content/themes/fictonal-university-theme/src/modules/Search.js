@@ -69,6 +69,14 @@ class Search {
                      `<p>No programs matches that search. <a href="${universityData.root_url}/programs">View all programs</a> </p>`
                   }
                   <h2 class="search-overlay__section-title">Professors</h2>
+                  ${results.professors.length ? 
+                     `<ul class="professor-cards">
+                        ${results.professors.map(result => `
+                           <li><a href="${result.permalink}">${result.title}</a></li>
+                        `).join("")}
+                     </ul>` :
+                     `<p>No professorts matches that search. <a href="${universityData.root_url}/programs">View all programs</a> </p>`
+                  }
                </div>
                <div class="one-third">
                   <h2 class="search-overlay__section-title">Campuses</h2>
