@@ -1,5 +1,15 @@
 <?php 
 
+add_action("rest_api_init", "university_custom_rest");
+
+function university_custom_rest() {
+   register_rest_field("post", "authorName", [
+      "get_callback" => function() {
+         
+      }
+   ]);  
+}
+
 function pageBanner($args = NULL){
    if(!isset($args["title"])){
       $args["title"] = get_the_title();
