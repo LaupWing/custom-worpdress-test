@@ -75,7 +75,7 @@ class Search {
                            <li><a href="${result.permalink}">${result.title}</a></li>
                         `).join("")}
                      </ul>` :
-                     `<p>No professorts matches that search. <a href="${universityData.root_url}/programs">View all programs</a> </p>`
+                     `<p>No professors matches that search. <a href="${universityData.root_url}/programs">View all programs</a> </p>`
                   }
                </div>
                <div class="one-third">
