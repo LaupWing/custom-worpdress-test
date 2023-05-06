@@ -72,7 +72,14 @@ class Search {
                   ${results.professors.length ? 
                      `<ul class="professor-cards">
                         ${results.professors.map(result => `
-                           <li><a href="${result.permalink}">${result.title}</a></li>
+                        <li class="professor-card__list-item">
+                           <a class="professor-card" href="${result.permalink}">
+                              <img src="${result.image}" class="professor-card__image" alt="">
+                              <span class="professor-card__name">
+                                 <?php echo the_title(); ?>
+                              </span>
+                           </a>
+                        </li>
                         `).join("")}
                      </ul>` :
                      `<p>No professors matches that search. </p>`
