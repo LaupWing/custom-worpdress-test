@@ -77,5 +77,28 @@ function universitySerachResults($data) {
       }
    } 
 
+   $programRelationshipQuery = new WP_Query([
+      "post_type" => "professor",
+      "meta_query" => [
+         [
+            "key" => "related_programs",
+            "compare" => "LIKE",
+            "value" => '"48"'
+         ]
+      ]
+   ]);
+
+   while ($programRelationshipQuery->have_posts()){
+      $programRelationshipQuery->the_post();
+      if(get_post_type() == "professor"){
+         array_push($results["professors"], [
+            "title" => get_the_title(),
+            "id" => get_the_ID(),
+            "permalink" => get_the_permalink(),
+            "image" => get_the_post_thumbnail_url(0, "professorLandscape")
+         ]);
+      }
+   }
+
    return $results;
 }
