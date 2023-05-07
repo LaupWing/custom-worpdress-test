@@ -20,7 +20,7 @@ function university_post_types() {
       "rewrite" => ["slug" => "programs"],
       "has_archive" => true,
       "show_in_rest" => true,
-      "supports" => ["title", "editor"],
+      "supports" => ["title"],
       "public" => true,
       "labels" => [
          "name" => "Programs",
