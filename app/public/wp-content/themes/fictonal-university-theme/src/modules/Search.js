@@ -45,7 +45,6 @@ class Search {
 
    async getResults() {
       $.getJSON(universityData.root_url + "/wp-json/university/v1/search?term=" + this.searchField.val(), (results) => {
-         console.log(results)
          this.resultsDiv.html(`
             <div class="row">
                <div class="one-third">
@@ -97,6 +96,24 @@ class Search {
                      `<p>No campuses matches that search. <a href="${universityData.root_url}/campuses">View all campuses</a></p>`
                   }
                   <h2 class="search-overlay__section-title">Events</h2>
+                  ${results.events.length 
+                     ? `${results.events.map(result => `
+                        <div class="event-summary">
+                           <a class="event-summary__date t-center" href="${result.permalink}">
+                              <span class="event-summary__month">${result.month}</span>
+                              <span class="event-summary__day">${result.day}</span>
+                           </a>
+                           <div class="event-summary__content">
+                              <h5 class="event-summary__title headline headline--tiny"><a href="${result.permalink}">${result.title}</a></h5>
+                              <p>
+                                 ${result.description}
+                                 <a href="${result.permalink}" class="nu gray">Learn more</a>
+                              </p>
+                           </div>
+                        </div>
+                     `).join("")}` 
+                     : `<p>No events matches that search. <a href="${universityData.root_url}/events">View all events</a></p>`
+                  }
                </div>
             </div>
          `)
