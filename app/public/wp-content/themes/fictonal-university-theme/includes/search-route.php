@@ -83,7 +83,7 @@ function universitySerachResults($data) {
          [
             "key" => "related_programs",
             "compare" => "LIKE",
-            "value" => '"48"'
+            "value" => '"54"'
          ]
       ]
    ]);
@@ -99,6 +99,8 @@ function universitySerachResults($data) {
          ]);
       }
    }
+
+   $results["professors"] = array_values(array_unique($results["professorts"], SORT_REGULAR));
 
    return $results;
 }
