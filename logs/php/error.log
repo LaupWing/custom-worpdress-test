@@ -525,3 +525,129 @@ These options need to match
 [02-May-2023 08:23:37 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'php_fileinfo.dll' (tried: C:/Program Files (x86)/Local/resources/extraResources/lightning-services/php-8.1.9+8/bin/win64/ext\php_fileinfo.dll (Kan opgegeven module niet vinden), C:/Program Files (x86)/Local/resources/extraResources/lightning-services/php-8.1.9+8/bin/win64/ext\php_php_fileinfo.dll.dll (Kan opgegeven module niet vinden)) in Unknown on line 0
 [02-May-2023 08:23:37 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library 'php_intl.dll' (tried: C:/Program Files (x86)/Local/resources/extraResources/lightning-services/php-8.1.9+8/bin/win64/ext\php_intl.dll (Kan opgegeven module niet vinden), C:/Program Files (x86)/Local/resources/extraResources/lightning-services/php-8.1.9+8/bin/win64/ext\php_php_intl.dll.dll (Kan opgegeven module niet vinden)) in Unknown on line 0
 [05-May-2023 07:18:51 UTC] PHP Warning:  Undefined property: WP_REST_Request::$term in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 15
+[07-May-2023 06:47:42 UTC] PHP Warning:  Undefined array key "professorts" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 103
+[07-May-2023 06:47:42 UTC] PHP Fatal error:  Uncaught TypeError: array_unique(): Argument #1 ($array) must be of type array, null given in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php:103
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php(103): array_unique(NULL, 0)
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(1181): universitySerachResults(Object(WP_REST_Request))
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/university/v1/...', Array, NULL)
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api.php(410): WP_REST_Server->serve_request('/university/v1/...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(308): rest_api_loaded(Object(WP))
+#6 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#8 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp.php(399): do_action_ref_array('parse_request', Array)
+#9 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp.php(780): WP->parse_request('')
+#10 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\functions.php(1334): WP->main('')
+#11 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-blog-header.php(16): wp()
+#12 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
+#13 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 103
+[07-May-2023 06:48:04 UTC] PHP Warning:  Undefined array key "professorts" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 103
+[07-May-2023 06:48:04 UTC] PHP Fatal error:  Uncaught TypeError: array_unique(): Argument #1 ($array) must be of type array, null given in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php:103
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php(103): array_unique(NULL, 0)
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(1181): universitySerachResults(Object(WP_REST_Request))
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/university/v1/...', Array, NULL)
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api.php(410): WP_REST_Server->serve_request('/university/v1/...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(308): rest_api_loaded(Object(WP))
+#6 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#8 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp.php(399): do_action_ref_array('parse_request', Array)
+#9 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp.php(780): WP->parse_request('')
+#10 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\functions.php(1334): WP->main('')
+#11 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-blog-header.php(16): wp()
+#12 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
+#13 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 103
+[07-May-2023 06:48:23 UTC] PHP Warning:  Undefined array key "professorts" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 103
+[07-May-2023 06:48:23 UTC] PHP Fatal error:  Uncaught TypeError: array_unique(): Argument #1 ($array) must be of type array, null given in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php:103
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php(103): array_unique(NULL, 0)
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(1181): universitySerachResults(Object(WP_REST_Request))
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/university/v1/...', Array, NULL)
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api.php(410): WP_REST_Server->serve_request('/university/v1/...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(308): rest_api_loaded(Object(WP))
+#6 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#8 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp.php(399): do_action_ref_array('parse_request', Array)
+#9 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp.php(780): WP->parse_request('')
+#10 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\functions.php(1334): WP->main('')
+#11 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-blog-header.php(16): wp()
+#12 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
+#13 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 103
+[07-May-2023 06:49:03 UTC] PHP Warning:  Undefined array key "professorts" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 103
+[07-May-2023 06:49:03 UTC] PHP Fatal error:  Uncaught TypeError: array_unique(): Argument #1 ($array) must be of type array, null given in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php:103
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php(103): array_unique(NULL, 0)
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(1181): universitySerachResults(Object(WP_REST_Request))
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/university/v1/...', Array, NULL)
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api.php(410): WP_REST_Server->serve_request('/university/v1/...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(308): rest_api_loaded(Object(WP))
+#6 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#8 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp.php(399): do_action_ref_array('parse_request', Array)
+#9 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp.php(780): WP->parse_request('')
+#10 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\functions.php(1334): WP->main('')
+#11 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-blog-header.php(16): wp()
+#12 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
+#13 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 103
+[07-May-2023 06:49:28 UTC] PHP Warning:  Undefined array key "professorts" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 103
+[07-May-2023 06:49:28 UTC] PHP Fatal error:  Uncaught TypeError: array_unique(): Argument #1 ($array) must be of type array, null given in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php:103
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php(103): array_unique(NULL, 0)
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(1181): universitySerachResults(Object(WP_REST_Request))
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/university/v1/...', Array, NULL)
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api.php(410): WP_REST_Server->serve_request('/university/v1/...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(308): rest_api_loaded(Object(WP))
+#6 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#8 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp.php(399): do_action_ref_array('parse_request', Array)
+#9 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp.php(780): WP->parse_request('')
+#10 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\functions.php(1334): WP->main('')
+#11 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-blog-header.php(16): wp()
+#12 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
+#13 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 103
+[07-May-2023 06:50:17 UTC] PHP Warning:  Undefined array key "professorts" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 103
+[07-May-2023 06:50:17 UTC] PHP Fatal error:  Uncaught TypeError: array_unique(): Argument #1 ($array) must be of type array, null given in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php:103
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php(103): array_unique(NULL, 0)
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(1181): universitySerachResults(Object(WP_REST_Request))
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/university/v1/...', Array, NULL)
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api.php(410): WP_REST_Server->serve_request('/university/v1/...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(308): rest_api_loaded(Object(WP))
+#6 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#8 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp.php(399): do_action_ref_array('parse_request', Array)
+#9 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp.php(780): WP->parse_request('')
+#10 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\functions.php(1334): WP->main('')
+#11 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-blog-header.php(16): wp()
+#12 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
+#13 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 103
+[07-May-2023 06:50:28 UTC] PHP Warning:  Undefined array key "professorts" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 103
+[07-May-2023 06:50:28 UTC] PHP Fatal error:  Uncaught TypeError: array_unique(): Argument #1 ($array) must be of type array, null given in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php:103
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php(103): array_unique(NULL, 0)
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(1181): universitySerachResults(Object(WP_REST_Request))
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(1028): WP_REST_Server->respond_to_request(Object(WP_REST_Request), '/university/v1/...', Array, NULL)
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api\class-wp-rest-server.php(442): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\rest-api.php(410): WP_REST_Server->serve_request('/university/v1/...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(308): rest_api_loaded(Object(WP))
+#6 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\plugin.php(565): WP_Hook->do_action(Array)
+#8 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp.php(399): do_action_ref_array('parse_request', Array)
+#9 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp.php(780): WP->parse_request('')
+#10 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\functions.php(1334): WP->main('')
+#11 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-blog-header.php(16): wp()
+#12 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
+#13 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\includes\search-route.php on line 103
