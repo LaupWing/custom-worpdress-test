@@ -7,6 +7,7 @@ class MyNotes {
 
    events() {
       $(".delete-note").on("click", this.deleteNote.bind(this))
+      $(".edit-note").on("click", this.editNote.bind(this))
    }
 
    // Methods go here
@@ -29,6 +30,12 @@ class MyNotes {
             console.log(response)
          },
       })
+   }
+
+   editNote(event){
+      var thisNote = $(event.target).parents("li")
+
+      thisNote.find(".note-title-field, .note-body-field").removeAttr("readonly").addClass("note-active-field")
    }
 }
 
