@@ -1,8 +1,9 @@
 <?php
 get_header();
+$searchQuery = get_search_query();
 pageBanner([
-   "title" => "Welome to our blog",
-   "subtitle" => "Keep up with our latest news"
+   "title" => "Search Results",
+   "subtitle" => "You searched for &ldquo;{$searchQuery}&rdquo;"
 ])
 ?>
 <div class="container container--narrow page-section">
