@@ -36,6 +36,7 @@ class MyNotes {
       var thisNote = $(event.target).parents("li")
 
       thisNote.find(".note-title-field, .note-body-field").removeAttr("readonly").addClass("note-active-field")
+      thisNote.find(".update-note").addClass("update-note--visible")
    }
 }
 
