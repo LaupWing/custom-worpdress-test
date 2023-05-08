@@ -51,6 +51,8 @@ function university_post_types() {
    ]);
 
    register_post_type("campus", [
+      "capability_type" => "campus",
+      "map_meta_cap" => true,
       "rewrite" => ["slug" => "campuses"],
       "has_archive" => true,
       "show_in_rest" => true,
