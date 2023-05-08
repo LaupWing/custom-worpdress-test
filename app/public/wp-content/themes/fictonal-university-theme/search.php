@@ -10,22 +10,10 @@ pageBanner([
    <?php 
       while(have_posts()) {
          the_post();
-
-         if (get_post_type() == "professor") {
-            echo "I am a professor";
-         }
+         get_template_part("template-parts/content", get_post_type());
+         
    ?>
-      <div class="post-item">
-         <h2 class="headline headline--medium headline--post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-         <div class="metabox">
-            <p>Posted by <?php echo the_author_posts_link(); ?> on <?php echo the_time("n.j.y"); ?> in  <?php echo get_the_category_list(", ") ?> </p>
-         </div>
-
-         <div class="generic-content">
-            <?php the_excerpt() ?>
-            <p><a class="btn btn--blue" href="<?php the_permalink() ?>">Continue reading</a></p>
-         </div>
-      </div>
+      
    <?php
       }
       echo paginate_links();
