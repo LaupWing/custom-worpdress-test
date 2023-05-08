@@ -7,12 +7,22 @@ class MyNotes {
 
    events() {
       $(".delete-note").on("click", this.deleteNote.bind(this))
-      console.log($(".delete-note"))
    }
 
    // Methods go here
    deleteNote(){
-      alert("you clicked on the delete button")
+      $.ajax({
+         url: universityData.root_url + "/wp-json/wp/v2/note/81",
+         type: "DELETE",
+         success: (response) => {
+            console.log("Congrats")
+            console.log(response)
+         },
+         error: (response) => {
+            console.log("Something went wrong")
+            console.log(response)
+         },
+      })
    }
 }
 
