@@ -9,6 +9,7 @@ class MyNotes {
       $(".delete-note").on("click", this.deleteNote.bind(this))
       $(".edit-note").on("click", this.editNote.bind(this))
       $(".update-note").on("click", this.updateNote.bind(this))
+      $(".submit-note").on("click", this.createNote.bind(this))
    }
 
    // Methods go here
@@ -57,6 +58,32 @@ class MyNotes {
    }
 
    updateNote(event) {
+      var thisNote = $(event.target).parents("li")
+      
+      var ourUpdatedPost = {
+         "title": thisNote.find(".note-title-field").val(),
+         "content": thisNote.find(".note-body-field").val()
+      }
+
+      $.ajax({
+         beforeSend: (xhr) => {
+            xhr.setRequestHeader("X-WP-Nonce", universityData.nonce);
+         },
+         url: universityData.root_url + "/wp-json/wp/v2/note/" + thisNote.data("id"),
+         type: "POST",
+         data: ourUpdatedPost,
+         success: (response) => {
+            this.makeNotReadOnly(thisNote)
+            console.log("Congrats")
+            console.log(response)
+         },
+         error: (response) => {
+            console.log("Something went wrong")
+            console.log(response)
+         },
+      })
+   }
+   createNote(event) {
       var thisNote = $(event.target).parents("li")
       
       var ourUpdatedPost = {
