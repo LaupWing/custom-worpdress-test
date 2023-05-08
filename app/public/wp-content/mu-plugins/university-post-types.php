@@ -4,6 +4,8 @@ function university_post_types() {
       "rewrite" => ["slug" => "events"],
       "has_archive" => true,
       "show_in_rest" => true,
+      "capability_type" => "event",
+      "map_meta_cap" => true,
       "supports" => ["title", "editor", "excerpt"],
       "public" => true,
       "labels" => [
