@@ -1,6 +1,6 @@
 <?php
 get_header();
-$searchQuery = get_search_query();
+$searchQuery = esc_html(get_search_query(false));
 pageBanner([
    "title" => "Search Results",
    "subtitle" => "You searched for &ldquo;{$searchQuery}&rdquo;"
@@ -10,6 +10,10 @@ pageBanner([
    <?php 
       while(have_posts()) {
          the_post();
+
+         if (get_post_type() == "professor") {
+            echo "I am a professor";
+         }
    ?>
       <div class="post-item">
          <h2 class="headline headline--medium headline--post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
