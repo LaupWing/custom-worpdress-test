@@ -10,6 +10,11 @@ function university_custom_rest() {
          return get_the_author();
       }
    ]);
+   register_rest_field("note", "userNoteCount", [
+      "get_callback" => function() {
+         return count_user_posts(get_current_user_id(), "note");
+      }
+   ]);
 }
 
 function pageBanner($args = NULL){
