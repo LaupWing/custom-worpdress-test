@@ -160,3 +160,13 @@ add_filter("login_headertext", "ourLoginText");
 function ourLoginText(){
    return "Fictional University";
 }
+
+// Force note posts to be private
+add_filter("wp_insert_post_data", "makeNotePrivate"); 
+
+function makeNotePrivate($data) {
+   if($data["post_type"] == "note" AND $data["post_status"] != "trash"){
+      $data["post_status"] = "private"; 
+   }
+   return $data;
+}
