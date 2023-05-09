@@ -84,22 +84,23 @@ class MyNotes {
       })
    }
    createNote(event) {
-      var thisNote = $(event.target).parents("li")
-      
-      var ourUpdatedPost = {
-         "title": thisNote.find(".note-title-field").val(),
-         "content": thisNote.find(".note-body-field").val()
+      var ourNewPost = {
+         "title": $(".new-note-title").val(),
+         "content": $(".new-note-body").val(),
+         "status": "publish"
       }
 
       $.ajax({
          beforeSend: (xhr) => {
             xhr.setRequestHeader("X-WP-Nonce", universityData.nonce);
          },
-         url: universityData.root_url + "/wp-json/wp/v2/note/" + thisNote.data("id"),
+         url: universityData.root_url + "/wp-json/wp/v2/note/",
          type: "POST",
-         data: ourUpdatedPost,
+         data: ourNewPost,
          success: (response) => {
-            this.makeNotReadOnly(thisNote)
+            $(".new-note-title, .new-note-body").val("")
+            $(`<li></li>`).prependTo("#my-notes").hide().slideDown()
+
             console.log("Congrats")
             console.log(response)
          },
