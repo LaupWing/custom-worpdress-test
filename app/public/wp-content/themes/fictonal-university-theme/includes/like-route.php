@@ -16,7 +16,7 @@ function universityLikeRoutes(){
 function createLike($data) {
    if (is_user_logged_in()){
       $professorId =  sanitize_text_field($data["professorId"]);
-      wp_insert_post([
+      return wp_insert_post([
          "post_type" => "like",
          "post_status" => "publish",
          "post_title" => "2nd PHP Test",
