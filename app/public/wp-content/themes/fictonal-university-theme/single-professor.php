@@ -23,12 +23,11 @@
                         "value" => get_the_id()
                      ]
                   ]);
-                  print_r($likeCount);
                ?>
                <span class="like-box">
                   <i class="fa fa-heart-o" aria-hidden="true"></i>
                   <i class="fa fa-heart" aria-hidden="true"></i>
-                  <span class="like-count"><?php $likeCount->found_posts?></span>
+                  <span class="like-count"><?php echo $likeCount->found_posts?></span>
                </span>
                <?php the_content() ?>
             </div>
