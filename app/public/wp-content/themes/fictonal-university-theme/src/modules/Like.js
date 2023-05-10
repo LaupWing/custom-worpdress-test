@@ -34,8 +34,7 @@ class Like {
             var likeCount = parseInt(currentLikeBox.find(".like-count").html(), 10)
             likeCount++
             currentLikeBox.find(".like-count").html(likeCount)
-            // currentLikeBox.attr("data-like", response)
-            console.log(response)
+            currentLikeBox.attr("data-like", response)
          },
          error: (response) => {
             console.log(response)
@@ -59,7 +58,6 @@ class Like {
             likeCount--
             currentLikeBox.find(".like-count").html(likeCount)
             currentLikeBox.attr("data-like", "")
-            console.log(response)
          },
          error: (response) => {
             console.log(response)
