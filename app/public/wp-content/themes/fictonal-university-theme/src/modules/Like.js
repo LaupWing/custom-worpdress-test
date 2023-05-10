@@ -10,15 +10,19 @@ class Like {
    }
 
    ourClickDispatcher() {
-
+      if($(".like-box").data("exists") == "yes"){
+         this.deleteLike()
+      }else {
+         this.createLike()
+      }
    }
 
    createLike() {
-
+      alert("create test message")
    }
-
+   
    deleteLike() {
-      
+      alert("delete test message")
    }
 
    // Methods
