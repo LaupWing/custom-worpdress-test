@@ -8,14 +8,23 @@
    Author URI: 
 */
 
-add_action("admin_menu", "ourPluginSettingsLink");
-
-function ourPluginSettingsLink(){
-   add_options_page("Word Count Settings", "Word Count", "manage_options", "word-count-settings-page", "ourSettingsHtml");
+class WordCountAndTimePlugin {
+   function __construct()
+   {
+      add_action("admin_menu", array($this, "adminPage"));
+   }
+   
+   function adminPage(){
+      add_options_page("Word Count Settings", "Word Count", "manage_options", "word-count-settings-page", array($this, "ourHTML"));
+   }
+   
+   function ourHTML() {
+   ?>
+      <div class="wrap">
+         <h1>Word Count Settings</h1>
+      </div>
+   <?php
+   }
 }
 
-function ourSettingsHtml() {
-?>
-   Hello world from our new plugin
-<?php
-}
+$wordCountAndTimePlugin = new WordCountAndTimePlugin();
