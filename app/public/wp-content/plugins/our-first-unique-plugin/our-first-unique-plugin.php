@@ -8,11 +8,14 @@
    Author URI: 
 */
 
-add_filter("the_content", "addToEndOfPost");
+add_action("admin_menu", "ourPluginSettingsLink");
 
-function addToEndOfPost($content) {
-   if(is_single() && is_main_query()){
-      return $content . "<p>My name is Laup Wing</p>";
-   }
-   return $content;
+function ourPluginSettingsLink(){
+   add_options_page("Word Count Settings", "Word Count", "manage_options", "word-count-settings-page", "ourSettingsHtml");
+}
+
+function ourSettingsHtml() {
+?>
+   Hello world from our new plugin
+<?php
 }
