@@ -47,7 +47,15 @@ class WordCountAndTimePlugin {
    }
    
    function locationHTML() { ?>
-      Hello
+      <div class="wrap">
+         <h1>Word Count Settings</h1>
+         <form action="options.php" method="POST">
+            <?php 
+               do_settings_sections("word-count-settings-page");
+               submit_button();
+            ?>
+         </form>
+      </div>
    <?php
    }
 
