@@ -47,6 +47,12 @@ class WordCountAndTimePlugin {
    }
    
    function locationHTML() { ?>
+      Hello
+   <?php
+   }
+
+   function ourHTML() {
+   ?>
       <div class="wrap">
          <h1>Word Count Settings</h1>
          <form action="options.php" method="POST">
@@ -55,14 +61,6 @@ class WordCountAndTimePlugin {
                submit_button();
             ?>
          </form>
-      </div>
-   <?php
-   }
-
-   function ourHTML() {
-   ?>
-      <div class="wrap">
-         <h1>Word Count Settings</h1>
       </div>
    <?php
    }
