@@ -46,6 +46,11 @@ class WordCountAndTimePlugin {
       );
    }
    
+   function locationHTML() { ?>
+      Hello
+   <?php
+   }
+
    function ourHTML() {
    ?>
       <div class="wrap">
