@@ -667,3 +667,12 @@ Stack trace:
 [10-May-2023 07:41:27 UTC] PHP Warning:  Undefined array key 0 in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\single-professor.php on line 44
 [10-May-2023 07:41:27 UTC] PHP Warning:  Attempt to read property "ID" on null in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictonal-university-theme\single-professor.php on line 44
 [11-May-2023 12:57:07 UTC] Cron reschedule event error for hook: wp_privacy_delete_old_export_files, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"hourly","args":[],"interval":3600}
+[11-May-2023 13:25:56 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function add_settings_field(), 1 passed in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-first-unique-plugin\our-first-unique-plugin.php on line 23 and at least 4 expected in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\includes\template.php:1702
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-first-unique-plugin\our-first-unique-plugin.php(23): add_settings_field('wcp_location')
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(308): WordCountAndTimePlugin->settings('')
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\admin-ajax.php(45): do_action('admin_init')
+#5 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\includes\template.php on line 1702

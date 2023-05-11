@@ -16,11 +16,34 @@ class WordCountAndTimePlugin {
    }
    
    function adminPage(){
-      add_options_page("Word Count Settings", "Word Count", "manage_options", "word-count-settings-page", array($this, "ourHTML"));
+      add_options_page(
+         "Word Count Settings", 
+         "Word Count", 
+         "manage_options", 
+         "word-count-settings-page", 
+         array($this, "ourHTML")
+      );
    }
 
    function settings(){
-      register_setting("wordcountplugin", "wcp_location", array("sanitize_callback" => "sanitize_text_field", "default" => 0));
+      add_settings_section(
+         "wcp_first_section",
+         null,
+         null,
+         "word-count-settings-page"
+      );
+      add_settings_field(
+         "wcp_location", 
+         "Display Location", 
+         array($this, "locationHTML"), 
+         "word-count-settings-page", 
+         "wcp_first_section"
+      );
+      register_setting(
+         "wordcountplugin", 
+         "wcp_location", 
+         array("sanitize_callback" => "sanitize_text_field", "default" => "0")
+      );
    }
    
    function ourHTML() {
