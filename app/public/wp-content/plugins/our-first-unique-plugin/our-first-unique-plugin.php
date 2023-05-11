@@ -11,5 +11,8 @@
 add_filter("the_content", "addToEndOfPost");
 
 function addToEndOfPost($content) {
-   return $content . "<p>My name is Laup Wing</p>";
+   if(is_single() && is_main_query()){
+      return $content . "<p>My name is Laup Wing</p>";
+   }
+   return $content;
 }
