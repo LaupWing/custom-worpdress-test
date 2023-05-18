@@ -152,7 +152,7 @@ function ourHeaderUrl() {
    return esc_url(site_url("/"));
 }
 
-add_action("login_enqueue_scripts", "ourLoginCss");
+   add_action("login_enqueue_scripts", "ourLoginCss");
 
 function ourLoginCss() {
    wp_enqueue_style("university_main_styles", get_theme_file_uri("build/style-index.css"));
