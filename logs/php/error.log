@@ -678,3 +678,9 @@ Stack trace:
   thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\includes\template.php on line 1702
 [19-May-2023 07:52:25 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-first-unique-plugin\our-first-unique-plugin.php on line 138
 [19-May-2023 08:01:01 UTC] PHP Parse error:  syntax error, unexpected token ")" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-first-unique-plugin\our-first-unique-plugin.php on line 20
+[19-May-2023 08:57:43 UTC] PHP Warning:  Undefined variable $toplevel_page_ourwordfilter in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 52
+[19-May-2023 08:57:48 UTC] PHP Warning:  Undefined variable $toplevel_page_ourwordfilter in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 52
+[19-May-2023 08:57:51 UTC] PHP Warning:  Undefined variable $toplevel_page_ourwordfilter in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 52
+[19-May-2023 08:58:01 UTC] PHP Warning:  Undefined variable $toplevel_page_ourwordfilter in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 52
+[19-May-2023 08:58:11 UTC] PHP Warning:  Undefined variable $toplevel_page_ourwordfilter in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 52
+[19-May-2023 08:58:20 UTC] PHP Warning:  Undefined variable $toplevel_page_ourwordfilter in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 52
