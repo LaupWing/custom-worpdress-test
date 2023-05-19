@@ -684,3 +684,6 @@ Stack trace:
 [19-May-2023 08:58:01 UTC] PHP Warning:  Undefined variable $toplevel_page_ourwordfilter in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 52
 [19-May-2023 08:58:11 UTC] PHP Warning:  Undefined variable $toplevel_page_ourwordfilter in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 52
 [19-May-2023 08:58:20 UTC] PHP Warning:  Undefined variable $toplevel_page_ourwordfilter in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 52
+[19-May-2023 09:20:31 UTC] PHP Warning:  Undefined array key "justsubmitted" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 71
+[19-May-2023 09:20:48 UTC] PHP Warning:  Undefined array key "justsubmitted" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 71
+[19-May-2023 09:20:52 UTC] PHP Warning:  Undefined array key "justsubmitted" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 71
