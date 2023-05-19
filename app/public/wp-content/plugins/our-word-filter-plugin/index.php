@@ -16,7 +16,29 @@ class OurWordFilterPlugin {
    function __construct()
    {
       add_action("admin_menu", array($this, "ourMenu"));
-      
+      add_filter("the_content", array($this, "filterLogic"));
+      add_action("admin_init", array($this, "ourSettings"));
+   }
+
+   function ourSettings() {
+      add_settings_section("replacement-text-section", null, null, "word-filter-options");
+      register_setting("replacementFields", "replacementText");
+
+      add_settings_field("replacement-text", "Filtered Text", array($this, "replacementFieldHTML"), "word-filter-options", "replacement-text-section");
+   }
+
+   function replacementFieldHTML() { ?>
+      <input type="text" name="replacementText" id="replacementText" value="<?php echo esc_attr(get_option("replacementText"), "***") ?>">
+      <p class="description">Leave blank to simply remove the filtered words</p>
+   <?php }
+
+   function filterLogic($content) {
+      if(get_option("plugin_words_to_filter")) {
+         $badWords = explode("," , get_option("plugin_words_to_filter"));
+         $badWordsTrimmed = array_map("trim", $badWords);
+         return str_ireplace($badWordsTrimmed, esc_html(get_option("replacementText", "****")), $content);
+      }
+      return $content;
    }
 
    function ourMenu() {
@@ -77,7 +99,7 @@ class OurWordFilterPlugin {
          <?php if (isset($_POST["justsubmitted"]) AND $_POST["justsubmitted"] == "true") $this->handleForm() ?>
          <form method="POST">
             <input type="hidden" name="justsubmitted" value="true">
-            <?php wp_nonce_field("saveFilerWords", "ourNonce") ?>
+            <?php wp_nonce_field("saveFilterWords", "ourNonce") ?>
             <label for="plugin_words_to_filter">
                <p>Enter a comma-seperated list of words from your site's content</p>
                <div class="word-filter__flex-container">
@@ -85,16 +107,27 @@ class OurWordFilterPlugin {
                      name="plugin_words_to_filter" 
                      id="plugin_words_to_filter" 
                      placeholder="bad, fam, hello"
-                  ><?php echo esc_textarea(get_option("plugin_words_to_filter")) ?>
-                  </textarea>
+                  ><?php echo esc_textarea(get_option("plugin_words_to_filter")) ?></textarea>
                </div>
                <input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes">
             </label>
          </form>
       </div>
    <?php }
+
+
    function optionsSubPage() { ?>
-      Hello World from the options page
+      <div class="wrap">
+         <h1>Word Filter Options</h1>
+         <form action="options.php" method="POST">
+            <?php 
+               settings_errors();
+               settings_fields("replacementFields");
+               do_settings_sections("word-filter-options");
+               submit_button();
+            ?>
+         </form>
+      </div>
    <?php }
 }
 

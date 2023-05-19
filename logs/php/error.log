@@ -687,3 +687,21 @@ Stack trace:
 [19-May-2023 09:20:31 UTC] PHP Warning:  Undefined array key "justsubmitted" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 71
 [19-May-2023 09:20:48 UTC] PHP Warning:  Undefined array key "justsubmitted" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 71
 [19-May-2023 09:20:52 UTC] PHP Warning:  Undefined array key "justsubmitted" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 71
+[19-May-2023 09:35:16 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function add_settings_section(), 1 passed in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 24 and at least 4 expected in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\includes\template.php:1624
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php(24): add_settings_section('')
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(308): OurWordFilterPlugin->ourSettings('')
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\admin-ajax.php(45): do_action('admin_init')
+#5 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\includes\template.php on line 1624
+[19-May-2023 09:35:20 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function add_settings_section(), 1 passed in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php on line 24 and at least 4 expected in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\includes\template.php:1624
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\our-word-filter-plugin\index.php(24): add_settings_section('')
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(308): OurWordFilterPlugin->ourSettings('')
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\admin-ajax.php(45): do_action('admin_init')
+#5 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\includes\template.php on line 1624
