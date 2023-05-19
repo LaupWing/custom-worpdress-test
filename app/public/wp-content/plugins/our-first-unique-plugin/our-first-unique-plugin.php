@@ -6,6 +6,8 @@
    Version: 1.0
    Author: Laupwing
    Author URI: 
+   Text Domain: wcpdomain
+   Domain Path: /languages
 */
 
 class WordCountAndTimePlugin {
@@ -14,6 +16,11 @@ class WordCountAndTimePlugin {
       add_action("admin_menu", array($this, "adminPage"));
       add_action("admin_init", array($this, "settings"));
       add_filter("the_content", array($this, "ifWrap"));
+      add_action("init", array($this, "languages"));
+   }
+
+   function languages() {
+      load_plugin_textdomain("wcpdomain", false, dirname(plugin_basename(__FILE__)) . "/languages");
    }
    
    function ifWrap($content) {
@@ -63,7 +70,7 @@ class WordCountAndTimePlugin {
    function adminPage(){
       add_options_page(
          "Word Count Settings", 
-         "Word Count", 
+         esc_html__("Word Count", "wcpdomain"), 
          "manage_options", 
          "word-count-settings-page", 
          array($this, "ourHTML")
