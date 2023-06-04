@@ -705,3 +705,5 @@ Stack trace:
 #4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\admin-ajax.php(45): do_action('admin_init')
 #5 {main}
   thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-admin\includes\template.php on line 1624
+[20-May-2023 06:34:31 UTC] Cron reschedule event error for hook: wp_privacy_delete_old_export_files, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"hourly","args":[],"interval":3600}
+[20-May-2023 06:34:36 UTC] Cron reschedule event error for hook: wp_scheduled_auto_draft_delete, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"daily","args":[],"interval":86400}
