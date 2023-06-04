@@ -15,11 +15,18 @@ if (!defined("ABSPATH")){
 class AreYouPayingAttention {
    function __construct()
    {
-      add_action("enqueue_block_editor_assets", array($this, "adminAssets"));
+      add_action(
+         "enqueue_block_editor_assets", 
+         array($this, "adminAssets")
+      );
    }
 
    function adminAssets() {
-      wp_enqueue_script("ournewblogtype", plugin_dir_url(__FILE__) . "test.js", array("wp-blocks", "wp-element"));
+      wp_enqueue_script(
+         "ournewblogtype", 
+         plugin_dir_url(__FILE__) . "test.js", 
+         array("wp-blocks", "wp-element")
+      );
    }
 }
 
