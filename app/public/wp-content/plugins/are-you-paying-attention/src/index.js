@@ -3,7 +3,9 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
    icon: "smiley",
    category: "common",
    edit: () => {
-      return wp.element.createElement("h3", null, "Hello, this is from the admin editor screen")
+      return (
+         <h1>This is jsx</h1>
+      )
    },
    save: () => {
       return wp.element.createElement("h1", null, "This is the frontend.")
