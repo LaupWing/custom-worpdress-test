@@ -4,7 +4,9 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
    category: "common",
    edit: () => {
       return (
-         <h1>This is jsx</h1>
+         <div>
+            <h1>This is jsx</h1>
+         </div>
       )
    },
    save: () => {

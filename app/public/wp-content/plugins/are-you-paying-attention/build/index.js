@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=window.wp.element;wp.blocks.registerBlockType("ourplugin/are-you-paying-attention",{title:"Are You Paying Attention?",icon:"smiley",category:"common",edit:()=>(0,e.createElement)("div",null,(0,e.createElement)("h1",null,"This is jsx")),save:()=>wp.element.createElement("h1",null,"This is the frontend.")})})();
