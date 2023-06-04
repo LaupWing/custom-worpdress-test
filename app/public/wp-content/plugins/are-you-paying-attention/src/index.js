@@ -2,14 +2,46 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
    title: "Are You Paying Attention?",
    icon: "smiley",
    category: "common",
-   edit: () => {
+   attributes: {
+      skyColor: {
+         type: "string",
+      },
+      grassColor: {
+         type: "string"
+      }
+   }, 
+   edit: (props) => {
+      const updateSkyColor = (e) => {
+         props.setAttributes({
+            skyColor: e.target.value
+         })
+      }
+      const updateGrassColor = (e) => {
+         props.setAttributes({
+            grassColor: e.target.value
+         })
+      }
+      
       return (
          <div>
-            <h1>This is jsx</h1>
+            <input 
+               type="text" 
+               placeholder="sky color" 
+               value={props.attributes.skyColor}
+               onChange={updateSkyColor} 
+            />
+            <input 
+               type="text" 
+               placeholder="grass color" 
+               value={props.attributes.grassColor}
+               onChange={updateGrassColor}
+            />
          </div>
       )
    },
-   save: () => {
-      return wp.element.createElement("h1", null, "This is the frontend.")
+   save: (props) => {
+      return (
+         <p> Today the sky is {props.attributes.skyColor} and the grass is {props.attributes.grassColor}</p>
+      )
    }
 })
