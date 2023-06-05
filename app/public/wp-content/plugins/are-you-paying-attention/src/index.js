@@ -1,4 +1,5 @@
-import { TextControl } from "@wordpress/components"
+import "./index.scss"
+import { TextControl, Flex, FlexBlock, FlexItem, Button, Icon } from "@wordpress/components"
 const Edit = (props) => {
    const updateSkyColor = (e) => {
       props.setAttributes({
@@ -12,20 +13,24 @@ const Edit = (props) => {
    }
    
    return (
-      <div>
-         <TextControl />
-         <input 
-            type="text" 
-            placeholder="sky color" 
-            value={props.attributes.skyColor}
-            onChange={updateSkyColor}
-         />
-         <input 
-            type="text" 
-            placeholder="grass color" 
-            value={props.attributes.grassColor}
-            onChange={updateGrassColor}
-         />
+      <div className="paying-attention-edit-block">
+         <TextControl label="Question: " />
+         <p>Answers:</p>
+         <Flex>
+            <FlexBlock>
+               <TextControl />
+            </FlexBlock>
+            <FlexItem>
+               <Button>
+                  <Icon icon="star-empty" />
+               </Button>
+            </FlexItem>
+            <FlexItem>
+               <Button>
+                  Delete
+               </Button>
+            </FlexItem>
+         </Flex>
       </div>
    )
 }
