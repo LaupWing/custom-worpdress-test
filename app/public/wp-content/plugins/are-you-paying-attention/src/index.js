@@ -25,9 +25,9 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
       }
       
       return (
-         <div>
+         <h3>
             <input type="text" />
-         </div>
+         </h3>
       )
    },
    save: () => {
