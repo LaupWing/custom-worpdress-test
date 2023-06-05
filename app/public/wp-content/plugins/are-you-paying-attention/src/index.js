@@ -39,9 +39,7 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
          </div>
       )
    },
-   save: (props) => {
-      return (
-         <p> Today the sky is {props.attributes.skyColor} and the grass is {props.attributes.grassColor}</p>
-      )
+   save: () => {
+      return null
    }
 })
