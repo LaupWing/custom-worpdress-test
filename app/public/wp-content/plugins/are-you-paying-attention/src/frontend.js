@@ -5,14 +5,16 @@ import "./frontend.scss"
 const divsToUpdate = document.querySelectorAll(".paying-attention-update-me")
 
 divsToUpdate.forEach((div) => {
-   ReactDOM.render(<Quiz />, div)
+   const data = JSON.parse(div.querySelector("pre").innerHTML)
+   ReactDOM.render(<Quiz question={data.question} />, div)
    div.classList.remove("paying-attention-update-me")
 })
 
-function Quiz() {
+function Quiz(props) {
+   console.log(props)
    return (
       <div className="paying-attention-frontend">
-         Hello from react
+         {props.question}
       </div>
    )
 }
