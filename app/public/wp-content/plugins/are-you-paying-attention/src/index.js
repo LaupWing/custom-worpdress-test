@@ -1,4 +1,4 @@
-// import { TextControl } from "@wordpress/components"
+import { TextControl } from "@wordpress/components"
 const Edit = (props) => {
    const updateSkyColor = (e) => {
       props.setAttributes({
@@ -13,6 +13,7 @@ const Edit = (props) => {
    
    return (
       <div>
+         <TextControl />
          <input 
             type="text" 
             placeholder="sky color" 
