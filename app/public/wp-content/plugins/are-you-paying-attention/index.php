@@ -1,5 +1,4 @@
 <?php
-
 /*
    Plugin Name: Are You Paying Attention Quiz
    Description: Give your readers a multiple choice question.
