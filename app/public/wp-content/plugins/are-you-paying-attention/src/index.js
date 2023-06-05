@@ -1,4 +1,4 @@
-import { TextControl } from "@wordpress/components"
+// import { TextControl } from "@wordpress/components"
 
 wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
    title: "Are You Paying Attention?",
@@ -12,9 +12,28 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
          type: "string"
       }
    }, 
-   edit: Edit,
+   edit: (props) => {
+      const updateSkyColor = (e) => {
+         props.setAttributes({
+            skyColor: e.target.value
+         })
+      }
+      const updateGrassColor = (e) => {
+         props.setAttributes({
+            grassColor: e.target.value
+         })
+      }
+      
+      return (
+         <div>
+            <input type="text" />
+         </div>
+      )
+   },
    save: () => {
-      return null
+      return (
+         <div>Je moeder</div>
+      )
    }
 })
 
@@ -32,7 +51,7 @@ const Edit = (props) => {
    
    return (
       <div>
-         <TextControl />
+         <input type="text" />
       </div>
    )
 }

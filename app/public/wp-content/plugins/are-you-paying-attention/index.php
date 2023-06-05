@@ -16,21 +16,26 @@ class AreYouPayingAttention {
    function __construct()
    {
       add_action(
-         "init", 
+         "enqueue_block_editor_assets", 
          array($this, "adminAssets")
       );
    }
 
    function adminAssets() {
-      wp_register_script(
+      wp_enqueue_script(
          "ournewblogtype", 
          plugin_dir_url(__FILE__) . "build/index.js", 
          array("wp-blocks", "wp-element", "wp-editor")
       );
-      register_block_type("ourplugin/are-you-paying-attention", array(
-         "editor_script" => "ournewblogtype",
-         "render_callback" => array($this, "theHTML")
-      ));
+      // wp_register_script(
+      //    "ournewblogtype", 
+      //    plugin_dir_url(__FILE__) . "build/index.js", 
+      //    array("wp-blocks", "wp-element", "wp-editor")
+      // );
+      // register_block_type("ourplugin/are-you-paying-attention", array(
+      //    "editor_script" => "ournewblogtype",
+      //    "render_callback" => array($this, "theHTML")
+      // ));
    }
 
    function theHTML($attributes) {
