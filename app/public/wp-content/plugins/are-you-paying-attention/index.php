@@ -25,7 +25,7 @@ class AreYouPayingAttention {
       wp_register_script(
          "ournewblogtype", 
          plugin_dir_url(__FILE__) . "build/index.js", 
-         array("wp-blocks", "wp-element")
+         array("wp-blocks", "wp-element", "wp-editor")
       );
       register_block_type("ourplugin/are-you-paying-attention", array(
          "editor_script" => "ournewblogtype",
