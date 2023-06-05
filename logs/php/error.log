@@ -739,3 +739,13 @@ Stack trace:
 [05-Jun-2023 06:53:15 UTC] PHP Warning:  Undefined array key "grassColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44
 [05-Jun-2023 06:53:15 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44
 [05-Jun-2023 06:53:15 UTC] PHP Warning:  Undefined array key "grassColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44
+[05-Jun-2023 07:19:58 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44
+[05-Jun-2023 07:19:58 UTC] PHP Warning:  Undefined array key "grassColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44
+[05-Jun-2023 07:20:05 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44
+[05-Jun-2023 07:20:05 UTC] PHP Warning:  Undefined array key "grassColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44
+[05-Jun-2023 07:21:36 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44
+[05-Jun-2023 07:21:36 UTC] PHP Warning:  Undefined array key "grassColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44
+[05-Jun-2023 07:21:47 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44
+[05-Jun-2023 07:21:47 UTC] PHP Warning:  Undefined array key "grassColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44
+[05-Jun-2023 07:30:41 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44
+[05-Jun-2023 07:30:41 UTC] PHP Warning:  Undefined array key "grassColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44

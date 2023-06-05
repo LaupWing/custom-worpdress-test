@@ -9,6 +9,18 @@ const Edit = (props) => {
 
    const deleteAnswer = (indexToDelete) => {
       props.setAttributes({answers: [...props.attributes.answers].filter((_, i) => i !== indexToDelete)})
+
+      if(indexToDelete == props.attributes.correctAnswer) {
+         props.setAttributes({
+            correctAnswer: undefined
+         })
+      }
+   }
+
+   const markAsCorrect = (indexToMark) => {
+      props.setAttributes({
+         correctAnswer: indexToMark
+      })
    }
    
    return (
@@ -35,8 +47,14 @@ const Edit = (props) => {
                   }} value={answer} />
                </FlexBlock>
                <FlexItem>
-                  <Button>
-                     <Icon className="mark-as-correct" icon="star-empty" />
+                  <Button
+                     onClick={() => {
+                        markAsCorrect(index)
+                     }}
+                  >
+                     <Icon 
+                        className="mark-as-correct" 
+                        icon={props.attributes.correctAnswer == index ? "star-filled" : "star-empty"} />
                   </Button>
                </FlexItem>
                <FlexItem>
@@ -51,13 +69,33 @@ const Edit = (props) => {
             </Flex>
          ))}
          <Button isPrimary onClick={() => {
-            props.setAttributes({answers: [...props.attributes.answers]})
+            props.setAttributes({answers: [...props.attributes.answers, ""]})
          }}>
             Add another answer
          </Button>
       </div>
    )
 }
+
+(function() {
+   let locked = false
+
+   wp.data.subscribe(function() {
+      const results = wp.data.select("core/block-editor").getBlocks().filter(function(block) {
+         return block.name == "ourplugin/are-you-paying-attention" && block.attributes.correctAnswer == undefined
+      })
+
+      if(results.length && !locked) {
+         locked = true
+         wp.data.dispatch("core/editor").lockPostSaving("noanswer")
+      }
+      if(!results.length && locked) {
+         locked = false
+         wp.data.dispatch("core/editor").unlockPostSaving("noanswer")
+      }
+   })
+})()
+
 
 wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
    title: "Are You Paying Attention?",
@@ -71,6 +109,10 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
          type: "array",
          default: ["red", "blue"]
       },
+      correctAnswer: {
+         type: "number",
+         default: undefined
+      }
    }, 
    edit: Edit,
    save: () => {
