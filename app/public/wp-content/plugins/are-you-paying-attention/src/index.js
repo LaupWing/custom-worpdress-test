@@ -25,14 +25,25 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
       }
       
       return (
-         <h3>
-            <input type="text" />
-         </h3>
+         <div>
+            <input 
+               type="text" 
+               placeholder="sky color" 
+               value={props.attributes.skyColor}
+               onChange={updateSkyColor}
+            />
+            <input 
+               type="text" 
+               placeholder="grass color" 
+               value={props.attributes.grassColor}
+               onChange={updateGrassColor}
+            />
+         </div>
       )
    },
-   save: () => {
+   save: (props) => {
       return (
-         <div>Je moeder</div>
+         <p>Today the sky is {props.attributes.skyColor} and the grass is {props.attributes.grassColor}</p>
       )
    }
 })
