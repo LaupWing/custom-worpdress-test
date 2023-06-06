@@ -15,7 +15,6 @@ function Quiz(props) {
       if(index == props.correctAnswer){
          alert("Correct")
       }else {
-         alert("Error")
       }
    }
    return (
