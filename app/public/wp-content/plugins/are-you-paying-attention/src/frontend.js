@@ -15,6 +15,7 @@ function Quiz(props) {
       if(index == props.correctAnswer){
          alert("Correct")
       }else {
+         alert("Error")
       }
    }
    return (
@@ -27,6 +28,9 @@ function Quiz(props) {
                </li>
             ))}
          </ul>
+         <div className="correct-message">
+            <p>That is correct</p>
+         </div>
       </div>
    )
 }
