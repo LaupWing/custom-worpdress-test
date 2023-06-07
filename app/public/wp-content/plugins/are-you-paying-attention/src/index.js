@@ -10,7 +10,7 @@ import {
    PanelRow,
    ColorPicker
 } from "@wordpress/components"
-import { InspectorControls } from "@wordpress/block-editor"
+import { InspectorControls, BlockControls, AlignmentToolbar } from "@wordpress/block-editor"
 import { ChromePicker } from "react-color"
 
 const Edit = (props) => {
@@ -38,6 +38,14 @@ const Edit = (props) => {
    
    return (
       <div className="paying-attention-edit-block" style={{ backgroundColor: props.attributes.bgColor}}>
+         <BlockControls>
+            <AlignmentToolbar 
+               value={props.attributes.theAlignment}
+               onChange={(x) => props.setAttributes({
+                  theAlignment: x
+               })}
+            />
+         </BlockControls>
          <InspectorControls>
             <PanelBody title="Background Color" initialOpen={true}>
                <PanelRow>
@@ -143,6 +151,10 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
          type: "string",
          default: "#EBEBEB"
       },
+      theAlignment: {
+         type: "string",
+         default: "left"
+      }
    }, 
    edit: Edit,
    save: () => {
