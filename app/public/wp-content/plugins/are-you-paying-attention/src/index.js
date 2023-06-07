@@ -10,10 +10,15 @@ import {
    PanelRow,
    ColorPicker
 } from "@wordpress/components"
-import { InspectorControls, BlockControls, AlignmentToolbar } from "@wordpress/block-editor"
+import { InspectorControls, BlockControls, AlignmentToolbar, useBlockProps } from "@wordpress/block-editor"
 import { ChromePicker } from "react-color"
 
 const Edit = (props) => {
+   const blockProps = useBlockProps({
+      className:"paying-attention-edit-block", 
+      style: { backgroundColor: props.attributes.bgColor}
+   })
+
    const updateQuestion = (value) => {
       props.setAttributes({
          question: value
@@ -37,7 +42,7 @@ const Edit = (props) => {
    }
    
    return (
-      <div className="paying-attention-edit-block" style={{ backgroundColor: props.attributes.bgColor}}>
+      <div {...blockProps}>
          <BlockControls>
             <AlignmentToolbar 
                value={props.attributes.theAlignment}
