@@ -156,6 +156,16 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
          default: "left"
       }
    }, 
+   description: "Give your adience a chance to prove their knowledge",
+   example: {
+      attributes: {
+         question: "What is my name?",
+         correctAnswer: 3,
+         answers: ["Meowsalot", "Barksalot", "Purssloud", "Brad"],
+         theAlignment: "center",
+         bgColor: "#CFE8F1"
+      }
+   },
    edit: Edit,
    save: () => {
       return null
