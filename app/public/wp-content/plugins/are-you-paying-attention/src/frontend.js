@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import ReactDOM from "react-dom"
 import "./frontend.scss"
 
@@ -12,6 +12,12 @@ divsToUpdate.forEach((div) => {
 
 function Quiz(props) {
    const [isCorrect, setIsCorrect] = useState(undefined)
+
+   useEffect(() => {
+      setTimeout(() => {
+         setIsCorrect(undefined)
+      }, 200)
+   }, [isCorrect])
 
    const handleAnswer = (index) => {
       if (index == props.correctAnswer) {
