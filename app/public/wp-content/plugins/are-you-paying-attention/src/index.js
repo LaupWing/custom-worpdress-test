@@ -7,9 +7,11 @@ import {
    Button, 
    Icon, 
    PanelBody, 
-   PanelRow 
+   PanelRow,
+   ColorPicker
 } from "@wordpress/components"
 import { InspectorControls } from "@wordpress/block-editor"
+import { ChromePicker } from "react-color"
 
 const Edit = (props) => {
    const updateQuestion = (value) => {
@@ -35,11 +37,17 @@ const Edit = (props) => {
    }
    
    return (
-      <div className="paying-attention-edit-block">
+      <div className="paying-attention-edit-block" style={{ backgroundColor: props.attributes.bgColor}}>
          <InspectorControls>
             <PanelBody title="Background Color" initialOpen={true}>
                <PanelRow>
-                  Hello!
+                  <ChromePicker 
+                     color={props.attributes.bgColor} 
+                        onChangeComplete={x => props.setAttributes({
+                        bgColor: x.hex
+                     })} 
+                     disableAlpha={true}
+                  />
                </PanelRow>
             </PanelBody>
          </InspectorControls>
@@ -130,7 +138,11 @@ wp.blocks.registerBlockType("ourplugin/are-you-paying-attention", {
       correctAnswer: {
          type: "number",
          default: undefined
-      }
+      },
+      bgColor: {
+         type: "string",
+         default: "#EBEBEB"
+      },
    }, 
    edit: Edit,
    save: () => {
