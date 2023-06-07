@@ -1,5 +1,16 @@
 import "./index.scss"
-import { TextControl, Flex, FlexBlock, FlexItem, Button, Icon } from "@wordpress/components"
+import { 
+   TextControl, 
+   Flex, 
+   FlexBlock, 
+   FlexItem, 
+   Button, 
+   Icon, 
+   PanelBody, 
+   PanelRow 
+} from "@wordpress/components"
+import { InspectorControls } from "@wordpress/block-editor"
+
 const Edit = (props) => {
    const updateQuestion = (value) => {
       props.setAttributes({
@@ -25,6 +36,13 @@ const Edit = (props) => {
    
    return (
       <div className="paying-attention-edit-block">
+         <InspectorControls>
+            <PanelBody title="Background Color" initialOpen={true}>
+               <PanelRow>
+                  Hello!
+               </PanelRow>
+            </PanelBody>
+         </InspectorControls>
          <TextControl 
             value={props.attributes.question}
             onChange={updateQuestion}
