@@ -15,7 +15,7 @@ get_header(); ?>
 
 <div class="container container--narrow page-section">
 
-   <p>This page took <strong><?php echo timer_stop(); ?></strong> seconds to prepare. Found <strong>x</strong> results (showing the first x).</p>
+   <p>This page took <strong><?php echo timer_stop(); ?></strong> seconds to prepare. Found <strong><?php echo $getPets->count ?></strong> results (showing the first <?php echo count($getPets->pets) ?>).</p>
 
 
    <table class="pet-adoption-table">
@@ -44,7 +44,18 @@ get_header(); ?>
          }
       ?>
    </table>
-
+   <?php 
+      if(current_user_can("administrator")) {
+   ?>
+      <form method="POST" action="<?php echo esc_url(admin_url("admin-post.php")) ?>" class="create-pet-form">
+         <p>Enter just the name for a new pet. Its species, weight and other details will be randomly generated.</p>
+         <input type="hidden" name="action" value="createpet">
+         <input type="text" name="incomingpetname" placeholder="name...">
+         <button>Add Pet</button>
+      </form>
+   <?php
+      }
+   ?>
 </div>
 
 <?php get_footer(); ?>

@@ -754,3 +754,7 @@ Stack trace:
 [05-Jun-2023 07:31:42 UTC] PHP Warning:  Undefined array key "skyColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44
 [05-Jun-2023 07:31:42 UTC] PHP Warning:  Undefined array key "grassColor" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\are-you-paying-attention\index.php on line 44
 [07-Jun-2023 13:39:19 UTC] PHP Warning:  Undefined array key "profId" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\featured-professor\featured-professor.php on line 35
+[08-Jun-2023 05:12:45 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\new-database-table\inc\template-pets.php on line 32
+[08-Jun-2023 05:25:01 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\new-database-table\inc\template-pets.php on line 32
+[08-Jun-2023 05:29:53 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\new-database-table\inc\template-pets.php on line 32
+[08-Jun-2023 05:30:12 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\plugins\new-database-table\inc\template-pets.php on line 33
