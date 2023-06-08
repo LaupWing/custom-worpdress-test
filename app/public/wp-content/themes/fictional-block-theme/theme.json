@@ -1,6 +1,29 @@
 {
    "version": 2,
-   "settings":  {
+   "styles":{
+      "blocks": {
+         "core/button": {
+            "color": {
+               "text": "#FFFFFF",
+               "background": "var(--wp--preset--color--primary)"
+            }
+         }
+      }
+   },
+   "settings": {
+      "typography": {
+         "fontSizes": []
+      },
+      "blocks": {
+         "core/button": {
+            "border": {
+               "color": false,
+               "radius": false,
+               "width": false,
+               "style": false
+            }
+         }
+      },
       "color": {
          "palette": [
             {
