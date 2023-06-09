@@ -1,3 +1,4 @@
+import { link } from "@wordpress/icons"
 import { ToolbarGroup, ToolbarButton } from "@wordpress/components"
 import { RichText, BlockControls } from "@wordpress/block-editor"
 
@@ -23,9 +24,16 @@ function EditComponent(props) {
       })
    }
 
+   const buttonHandler = () => {
+
+   }
+
    return (
       <>
          <BlockControls>
+            <ToolbarGroup>
+               <ToolbarButton onClick={buttonHandler} icon={link} />
+            </ToolbarGroup>
             <ToolbarGroup>
                <ToolbarButton isPressed={props.attributes.size === "large"} onClick={() => props.setAttributes({size: "large"})}>Large</ToolbarButton>
                <ToolbarButton isPressed={props.attributes.size === "medium"} onClick={() => props.setAttributes({size: "medium"})}>Medium</ToolbarButton>
@@ -35,7 +43,7 @@ function EditComponent(props) {
          <RichText 
             allowedFormats={[]}
             tagName="a" 
-            className={`btn btn--${props.attributes.size}`} 
+            className={`btn btn--${props.attributes.size} btn--blue`} 
             value={props.attributes.text} 
             onChange={handleTextChange} 
          />
@@ -45,6 +53,6 @@ function EditComponent(props) {
 
 function SaveComponent(props) {
    return (
-      <a href="#" className={`btn btn--${props.attributes.size}`} >{props.attributes.text}</a>
+      <a href="#" className={`btn btn--${props.attributes.size} btn--blue`} >{props.attributes.text}</a>
    )
 }
