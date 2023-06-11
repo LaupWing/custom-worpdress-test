@@ -1,5 +1,5 @@
 import { link } from "@wordpress/icons"
-import { ToolbarGroup, ToolbarButton, Popover } from "@wordpress/components"
+import { ToolbarGroup, ToolbarButton, Popover, Button } from "@wordpress/components"
 import { useState } from "@wordpress/element"
 import { RichText, BlockControls, __experimentalLinkControl as LinkControl } from "@wordpress/block-editor"
 
@@ -87,6 +87,6 @@ function EditComponent(props) {
 
 function SaveComponent(props) {
    return (
-      <a href="#" className={`btn btn--${props.attributes.size} btn--blue`} >{props.attributes.text}</a>
+      <a href={props.attributes.linkObject.url} className={`btn btn--${props.attributes.size} btn--blue`} >{props.attributes.text}</a>
    )
 }

@@ -223,7 +223,7 @@ function EditComponent(props) {
     settings: [],
     value: props.attributes.linkObject,
     onChange: handleLinkChange
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(Button, {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Button, {
     variant: "primary",
     onClick: () => setIsLinkPickerVisible(false),
     style: {
@@ -234,7 +234,7 @@ function EditComponent(props) {
 }
 function SaveComponent(props) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
+    href: props.attributes.linkObject.url,
     className: `btn btn--${props.attributes.size} btn--blue`
   }, props.attributes.text);
 }
