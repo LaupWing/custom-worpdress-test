@@ -1,5 +1,6 @@
 import { link } from "@wordpress/icons"
 import { ToolbarGroup, ToolbarButton } from "@wordpress/components"
+import { useState } from "@wordpress/element"
 import { RichText, BlockControls } from "@wordpress/block-editor"
 
 wp.blocks.registerBlockType("ourblocktheme/genericbutton", {
@@ -18,6 +19,8 @@ wp.blocks.registerBlockType("ourblocktheme/genericbutton", {
 })
 
 function EditComponent(props) {
+   const [isLinkPickerVisible, setIsLinkPickerVisible] = useState(false)
+
    const handleTextChange = (x) => {
       props.setAttributes({
          text: x
