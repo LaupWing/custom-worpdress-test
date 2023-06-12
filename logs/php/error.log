@@ -1028,3 +1028,87 @@ Stack trace:
 [12-Jun-2023 08:44:50 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
 [12-Jun-2023 08:44:51 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
 [12-Jun-2023 08:44:52 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 09:48:49 UTC] PHP Warning:  require(C:\Users\pin-d\Local Sites\tutorial-college\app\public/wp-content/themes/fictional-block-theme/our-blocks/slide.php): Failed to open stream: No such file or directory in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 224
+[12-Jun-2023 09:48:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\pin-d\Local Sites\tutorial-college\app\public/wp-content/themes/fictional-block-theme/our-blocks/slide.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php:224
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-block.php(258): JSXBlock->ourRenderCallback(Array, '\n\n<h1 class="wp...', Object(WP_Block))
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-block.php(244): WP_Block->render()
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\blocks.php(1051): WP_Block->render()
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\blocks.php(1089): render_block(Array)
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\block-template.php(240): do_blocks('<!-- wp:ourbloc...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#6 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\pin-d\\...')
+#7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-blog-header.php(19): require_once('C:\\Users\\pin-d\\...')
+#8 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
+#9 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 224
+[12-Jun-2023 09:48:53 UTC] PHP Warning:  require(C:\Users\pin-d\Local Sites\tutorial-college\app\public/wp-content/themes/fictional-block-theme/our-blocks/slide.php): Failed to open stream: No such file or directory in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 224
+[12-Jun-2023 09:48:53 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\pin-d\Local Sites\tutorial-college\app\public/wp-content/themes/fictional-block-theme/our-blocks/slide.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php:224
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-block.php(258): JSXBlock->ourRenderCallback(Array, '\n\n<h1 class="wp...', Object(WP_Block))
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-block.php(244): WP_Block->render()
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\blocks.php(1051): WP_Block->render()
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\blocks.php(1089): render_block(Array)
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\block-template.php(240): do_blocks('<!-- wp:ourbloc...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#6 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\pin-d\\...')
+#7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-blog-header.php(19): require_once('C:\\Users\\pin-d\\...')
+#8 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
+#9 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 224
+[12-Jun-2023 09:49:02 UTC] PHP Warning:  require(C:\Users\pin-d\Local Sites\tutorial-college\app\public/wp-content/themes/fictional-block-theme/our-blocks/slide.php): Failed to open stream: No such file or directory in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 224
+[12-Jun-2023 09:49:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\pin-d\Local Sites\tutorial-college\app\public/wp-content/themes/fictional-block-theme/our-blocks/slide.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php:224
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-block.php(258): JSXBlock->ourRenderCallback(Array, '\n\n<h2 class="wp...', Object(WP_Block))
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-block.php(244): WP_Block->render()
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\blocks.php(1051): WP_Block->render()
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\blocks.php(1089): render_block(Array)
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\block-template.php(240): do_blocks('<!-- wp:ourbloc...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#6 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\pin-d\\...')
+#7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-blog-header.php(19): require_once('C:\\Users\\pin-d\\...')
+#8 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
+#9 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 224
+[12-Jun-2023 09:49:10 UTC] PHP Warning:  require(C:\Users\pin-d\Local Sites\tutorial-college\app\public/wp-content/themes/fictional-block-theme/our-blocks/slide.php): Failed to open stream: No such file or directory in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 224
+[12-Jun-2023 09:49:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\pin-d\Local Sites\tutorial-college\app\public/wp-content/themes/fictional-block-theme/our-blocks/slide.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php:224
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-block.php(258): JSXBlock->ourRenderCallback(Array, '\n\n<h2 class="wp...', Object(WP_Block))
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-block.php(244): WP_Block->render()
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\blocks.php(1051): WP_Block->render()
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\blocks.php(1089): render_block(Array)
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\block-template.php(240): do_blocks('<!-- wp:ourbloc...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#6 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\pin-d\\...')
+#7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-blog-header.php(19): require_once('C:\\Users\\pin-d\\...')
+#8 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
+#9 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 224
+[12-Jun-2023 09:49:11 UTC] PHP Warning:  require(C:\Users\pin-d\Local Sites\tutorial-college\app\public/wp-content/themes/fictional-block-theme/our-blocks/slide.php): Failed to open stream: No such file or directory in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 224
+[12-Jun-2023 09:49:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\pin-d\Local Sites\tutorial-college\app\public/wp-content/themes/fictional-block-theme/our-blocks/slide.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php:224
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-block.php(258): JSXBlock->ourRenderCallback(Array, '\n\n<h2 class="wp...', Object(WP_Block))
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-block.php(244): WP_Block->render()
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\blocks.php(1051): WP_Block->render()
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\blocks.php(1089): render_block(Array)
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\block-template.php(240): do_blocks('<!-- wp:ourbloc...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#6 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\pin-d\\...')
+#7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-blog-header.php(19): require_once('C:\\Users\\pin-d\\...')
+#8 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
+#9 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 224
+[12-Jun-2023 09:49:24 UTC] PHP Warning:  require(C:\Users\pin-d\Local Sites\tutorial-college\app\public/wp-content/themes/fictional-block-theme/our-blocks/slide.php): Failed to open stream: No such file or directory in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 224
+[12-Jun-2023 09:49:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\pin-d\Local Sites\tutorial-college\app\public/wp-content/themes/fictional-block-theme/our-blocks/slide.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php:224
+Stack trace:
+#0 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-block.php(258): JSXBlock->ourRenderCallback(Array, '\n\n<h2 class="wp...', Object(WP_Block))
+#1 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-block.php(244): WP_Block->render()
+#2 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\blocks.php(1051): WP_Block->render()
+#3 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\blocks.php(1089): render_block(Array)
+#4 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\block-template.php(240): do_blocks('<!-- wp:ourbloc...')
+#5 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\template-canvas.php(12): get_the_block_template_html()
+#6 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\template-loader.php(106): include('C:\\Users\\pin-d\\...')
+#7 C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-blog-header.php(19): require_once('C:\\Users\\pin-d\\...')
+#8 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
+#9 {main}
+  thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 224
