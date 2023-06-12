@@ -994,3 +994,37 @@ Stack trace:
 [12-Jun-2023 07:21:27 UTC] PHP Warning:  Undefined property: JSXBlock::$renderCallBack in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 209
 [12-Jun-2023 07:21:27 UTC] PHP Warning:  Undefined property: JSXBlock::$renderCallBack in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 209
 [12-Jun-2023 07:21:27 UTC] PHP Warning:  Undefined property: JSXBlock::$renderCallBack in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 209
+[12-Jun-2023 08:44:44 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:46 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:46 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:46 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:46 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:46 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:46 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:46 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:46 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:47 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:47 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:47 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:47 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:47 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:47 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:47 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:48 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:49 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:49 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:49 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:49 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:49 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:49 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:49 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:49 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:49 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:49 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:49 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:49 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:49 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:50 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:50 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:51 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
+[12-Jun-2023 08:44:52 UTC] PHP Warning:  Array to string conversion in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 208
