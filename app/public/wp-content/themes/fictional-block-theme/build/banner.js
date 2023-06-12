@@ -12,6 +12,16 @@ module.exports = window["wp"]["blockEditor"];
 
 /***/ }),
 
+/***/ "@wordpress/compponents":
+/*!*************************************!*\
+  !*** external ["wp","compponents"] ***!
+  \*************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["compponents"];
+
+/***/ }),
+
 /***/ "@wordpress/element":
 /*!*********************************!*\
   !*** external ["wp","element"] ***!
@@ -101,6 +111,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_compponents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/compponents */ "@wordpress/compponents");
+/* harmony import */ var _wordpress_compponents__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compponents__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 wp.blocks.registerBlockType("ourblocktheme/banner", {
@@ -118,11 +131,21 @@ wp.blocks.registerBlockType("ourblocktheme/banner", {
   save: SaveComponent
 });
 function EditComponent() {
-  {/* <h1 className="headline headline--large">Welcome!</h1>
-   <h2 className="headline headline--medium">We think you&rsquo;ll like it here.</h2>
-   <h3 className="headline headline--small">Why don&rsquo;t you check out the <strong>major</strong> you&rsquo;re interested in?</h3>
-   <a href="#" className="btn btn--large btn--blue">Find Your Major</a> */}
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  const onFileSelect = () => {};
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_compponents__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    title: "Background",
+    initialOpen: true
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_compponents__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUploadCheck, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
+    onSelect: onFileSelect,
+    value: 1,
+    render: ({
+      open
+    }) => {
+      return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_compponents__WEBPACK_IMPORTED_MODULE_2__.Button, {
+        onClick: open
+      }, "Choose Image");
+    }
+  }))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "page-banner"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "page-banner__bg-image",
@@ -133,7 +156,7 @@ function EditComponent() {
     className: "page-banner__content container t-center c-white"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
     allowedBlocks: ["ourblocktheme/genericheading", "ourblocktheme/genericbutton"]
-  })));
+  }))));
 }
 function SaveComponent() {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, null);
