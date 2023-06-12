@@ -187,6 +187,29 @@ function makeNotePrivate($data, $postarr) {
    return $data;
 }
 
+class PlaceholderBlock {
+   function __construct($name)
+   {
+      $this->name = $name;
+      add_action("init", [$this, "onInit"]);
+   }
+
+   function ourRenderCallback($attributes, $content) {
+      ob_start();
+      require get_theme_file_path("/our-blocks/{$this->name}.php");
+      return ob_get_clean();
+   }
+
+   function onInit() {
+      wp_register_script($this->name, get_stylesheet_directory_uri() . "/our-blocks/{$this->name}.js", array("wp-blocks", "wp-editor"));
+
+      register_block_type("ourblocktheme/{$this->name}", array(
+         "editor_script" => $this->name,
+         "render_callback" => [$this, "ourRenderCallback"]
+      ));
+   }
+}
+
 class JSXBlock {
    function __construct($name, $renderCallback = null, $data = null)
    {
@@ -220,6 +243,7 @@ class JSXBlock {
    }
 }
 
+new PlaceholderBlock("eventsandblogs");
 new JSXBlock("banner", true, ["fallbackimage" => get_theme_file_uri("/images/library-hero.jpg")]);
 new JSXBlock("genericheading");
 new JSXBlock("genericbutton");
