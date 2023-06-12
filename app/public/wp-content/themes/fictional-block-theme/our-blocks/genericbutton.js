@@ -13,8 +13,10 @@ import {
    RichText, 
    InspectorControls, 
    BlockControls, 
-   __experimentalLinkControl as LinkControl 
+   __experimentalLinkControl as LinkControl,
+   getColorObjectByColorValue
 } from "@wordpress/block-editor"
+import ourColors from "../includes/ourColors"
 
 wp.blocks.registerBlockType("ourblocktheme/genericbutton", {
    title: "Generic Button",
@@ -33,7 +35,8 @@ wp.blocks.registerBlockType("ourblocktheme/genericbutton", {
          }
       },
       colorName: {
-         type: "string"
+         type: "string",
+         default: "blue"
       }
    }, 
    edit: EditComponent,
@@ -42,6 +45,9 @@ wp.blocks.registerBlockType("ourblocktheme/genericbutton", {
 
 function EditComponent(props) {
    const [isLinkPickerVisible, setIsLinkPickerVisible] = useState(false)
+   
+
+   const currentColorValue = ourColors.find(color => color.name == props.attributes.colorName).color
 
    const handleTextChange = (x) => {
       props.setAttributes({
@@ -60,25 +66,13 @@ function EditComponent(props) {
    }
 
    const handleColorChange = (colorCode) => {
+      const { name } = getColorObjectByColorValue(ourColors, colorCode)
+
       props.setAttributes({
-         colorName: colorCode
+         colorName: name
       })
    }
 
-   const ourColors = [
-      {
-         name: "blue",
-         color: "#0d3b66"
-      },
-      {
-         name: "orange",
-         color: "#ee964b"
-      },
-      {
-         name: "dark-orange",
-         color: "#f95738"
-      },
-   ]
 
    return (
       <>
@@ -96,8 +90,10 @@ function EditComponent(props) {
             <PanelBody title="Color" initialOpen={true}>
                <PanelRow>
                   <ColorPalette
+                     disableCustomColors={true}
+                     clearable={false}
                      colors={ourColors}
-                     value={props.attributes.colorName}
+                     value={currentColorValue}
                      onChange={handleColorChange}
                   />
                </PanelRow>
@@ -106,7 +102,7 @@ function EditComponent(props) {
          <RichText 
             allowedFormats={[]}
             tagName="a" 
-            className={`btn btn--${props.attributes.size} btn--blue`} 
+            className={`btn btn--${props.attributes.size} btn--${props.attributes.colorName}`} 
             value={props.attributes.text} 
             onChange={handleTextChange} 
          />
@@ -135,6 +131,6 @@ function EditComponent(props) {
 
 function SaveComponent(props) {
    return (
-      <a href={props.attributes.linkObject.url} className={`btn btn--${props.attributes.size} btn--blue`} >{props.attributes.text}</a>
+      <a href={props.attributes.linkObject.url} className={`btn btn--${props.attributes.size} btn--${props.attributes.colorName}`} >{props.attributes.text}</a>
    )
 }
