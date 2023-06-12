@@ -173,8 +173,11 @@ wp.blocks.registerBlockType("ourblocktheme/genericbutton", {
     linkObject: {
       type: "object",
       default: {
-        url: "#"
+        url: ""
       }
+    },
+    colorName: {
+      type: "string"
     }
   },
   edit: EditComponent,
@@ -195,6 +198,21 @@ function EditComponent(props) {
       linkObject: newLink
     });
   };
+  const handleColorChange = colorCode => {
+    props.setAttributes({
+      colorName: colorCode
+    });
+  };
+  const ourColors = [{
+    name: "blue",
+    color: "#0d3b66"
+  }, {
+    name: "orange",
+    color: "#ee964b"
+  }, {
+    name: "dark-orange",
+    color: "#f95738"
+  }];
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarGroup, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToolbarButton, {
     onClick: buttonHandler,
     icon: _wordpress_icons__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -213,7 +231,14 @@ function EditComponent(props) {
     onClick: () => props.setAttributes({
       size: "small"
     })
-  }, "Small"))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+  }, "Small"))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.PanelBody, {
+    title: "Color",
+    initialOpen: true
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ColorPalette, {
+    colors: ourColors,
+    value: props.attributes.colorName,
+    onChange: handleColorChange
+  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
     allowedFormats: [],
     tagName: "a",
     className: `btn btn--${props.attributes.size} btn--blue`,

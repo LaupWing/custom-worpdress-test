@@ -1,7 +1,20 @@
 import { link } from "@wordpress/icons"
-import { ToolbarGroup, ToolbarButton, Popover, Button } from "@wordpress/components"
+import { 
+   ToolbarGroup, 
+   ToolbarButton, 
+   Popover, 
+   Button, 
+   PanelBody, 
+   PanelRow, 
+   ColorPalette 
+} from "@wordpress/components"
 import { useState } from "@wordpress/element"
-import { RichText, BlockControls, __experimentalLinkControl as LinkControl } from "@wordpress/block-editor"
+import { 
+   RichText, 
+   InspectorControls, 
+   BlockControls, 
+   __experimentalLinkControl as LinkControl 
+} from "@wordpress/block-editor"
 
 wp.blocks.registerBlockType("ourblocktheme/genericbutton", {
    title: "Generic Button",
@@ -16,9 +29,12 @@ wp.blocks.registerBlockType("ourblocktheme/genericbutton", {
       linkObject: {
          type: "object",
          default: {
-            url: "#"
+            url: ""
          }
       },
+      colorName: {
+         type: "string"
+      }
    }, 
    edit: EditComponent,
    save: SaveComponent
@@ -43,6 +59,27 @@ function EditComponent(props) {
       })
    }
 
+   const handleColorChange = (colorCode) => {
+      props.setAttributes({
+         colorName: colorCode
+      })
+   }
+
+   const ourColors = [
+      {
+         name: "blue",
+         color: "#0d3b66"
+      },
+      {
+         name: "orange",
+         color: "#ee964b"
+      },
+      {
+         name: "dark-orange",
+         color: "#f95738"
+      },
+   ]
+
    return (
       <>
          <BlockControls>
@@ -55,6 +92,17 @@ function EditComponent(props) {
                <ToolbarButton isPressed={props.attributes.size === "small"} onClick={() => props.setAttributes({size: "small"})}>Small</ToolbarButton>
             </ToolbarGroup>
          </BlockControls>
+         <InspectorControls>
+            <PanelBody title="Color" initialOpen={true}>
+               <PanelRow>
+                  <ColorPalette
+                     colors={ourColors}
+                     value={props.attributes.colorName}
+                     onChange={handleColorChange}
+                  />
+               </PanelRow>
+            </PanelBody>
+         </InspectorControls>
          <RichText 
             allowedFormats={[]}
             tagName="a" 
