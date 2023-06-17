@@ -42,6 +42,7 @@ function EditComponent(props) {
                method: "GET"
             })
             props.setAttributes({
+               themeimage: "",
                imgURL: response.media_details.sizes.pageBanner.source_url
             })
          }
@@ -50,8 +51,11 @@ function EditComponent(props) {
    }, [props.attributes.imgID])
 
    useEffect(() => {
+      console.log(slide.themeimagepath)
       if(props.attributes.themeimage) {
-         props.setAttributes
+         props.setAttributes({
+            imgURL: `${slide.themeimagepath}${props.attributes.themeimage}`
+         })
       }
    }, [])
 
