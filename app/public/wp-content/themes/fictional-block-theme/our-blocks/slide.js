@@ -14,6 +14,9 @@ wp.blocks.registerBlockType("ourblocktheme/slide", {
       align: ["full"]
    }, 
    attributes: {
+      themeimage: {
+         type: "string"
+      },
       align: {
          type: "string",
          default: "full"
@@ -45,6 +48,12 @@ function EditComponent(props) {
       }
       go()
    }, [props.attributes.imgID])
+
+   useEffect(() => {
+      if(props.attributes.themeimage) {
+         props.setAttributes
+      }
+   }, [])
 
    const onFileSelect = (x) => {
       props.setAttributes({
