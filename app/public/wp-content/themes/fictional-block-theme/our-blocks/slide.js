@@ -52,6 +52,7 @@ function EditComponent(props) {
 
    useEffect(() => {
       console.log(slide.themeimagepath)
+      console.log(props.attributes.themeimage)
       if(props.attributes.themeimage) {
          props.setAttributes({
             imgURL: `${slide.themeimagepath}${props.attributes.themeimage}`
