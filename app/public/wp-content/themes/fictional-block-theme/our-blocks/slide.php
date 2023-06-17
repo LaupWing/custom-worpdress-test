@@ -1,4 +1,10 @@
 <?php 
+
+if(isset($attributes["themeimage"])) {
+   $themeimage = $attributes["themeimage"];
+   $attributes["imgURL"] = get_theme_file_uri("/images/{$themeimage}");
+}
+
 if (!isset($attributes["imgURL"])) {
    $attributes["imgURL"] = get_theme_file_uri("/images/library-hero.jpg");
 }else {
