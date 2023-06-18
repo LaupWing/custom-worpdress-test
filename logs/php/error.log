@@ -1113,3 +1113,14 @@ Stack trace:
 #9 {main}
   thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 224
 [18-Jun-2023 06:34:41 UTC] PHP Warning:  Undefined array key 1 in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-query.php on line 3609
+[18-Jun-2023 06:37:19 UTC] PHP Warning:  Undefined array key "imgURL" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme-copied\our-blocks\banner.php on line 3
+[18-Jun-2023 06:37:19 UTC] PHP Warning:  Undefined array key "imgURL" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme-copied\our-blocks\banner.php on line 3
+[18-Jun-2023 06:37:20 UTC] PHP Warning:  Undefined array key "photo" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme-copied\functions.php on line 28
+[18-Jun-2023 06:37:20 UTC] PHP Warning:  Undefined array key "photo" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme-copied\functions.php on line 28
+[18-Jun-2023 06:37:22 UTC] PHP Warning:  Undefined array key "imgURL" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme-copied\our-blocks\banner.php on line 3
+[18-Jun-2023 06:37:23 UTC] PHP Warning:  Trying to access array offset on value of type null in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme-copied\functions.php on line 20
+[18-Jun-2023 06:37:23 UTC] PHP Warning:  Undefined array key "subtitle" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme-copied\functions.php on line 24
+[18-Jun-2023 06:37:23 UTC] PHP Warning:  Undefined array key "photo" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme-copied\functions.php on line 28
+[18-Jun-2023 06:37:23 UTC] PHP Warning:  Undefined array key "imgURL" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme-copied\our-blocks\banner.php on line 3
+[18-Jun-2023 06:38:32 UTC] PHP Warning:  Undefined array key "imgURL" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme-copied\our-blocks\banner.php on line 3
+[18-Jun-2023 06:38:48 UTC] PHP Warning:  Undefined array key "imgURL" in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme-copied\our-blocks\banner.php on line 3
