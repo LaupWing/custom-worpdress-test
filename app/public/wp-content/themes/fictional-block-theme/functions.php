@@ -247,6 +247,7 @@ new PlaceholderBlock("eventsandblogs");
 new PlaceholderBlock("header");
 new PlaceholderBlock("footer");
 new PlaceholderBlock("singlepost");
+new PlaceholderBlock("page");
 
 new JSXBlock("banner", true, ["fallbackimage" => get_theme_file_uri("/images/library-hero.jpg")]);
 new JSXBlock("genericheading");

@@ -1112,3 +1112,4 @@ Stack trace:
 #8 C:\Users\pin-d\Local Sites\tutorial-college\app\public\index.php(17): require('C:\\Users\\pin-d\\...')
 #9 {main}
   thrown in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-content\themes\fictional-block-theme\functions.php on line 224
+[18-Jun-2023 06:34:41 UTC] PHP Warning:  Undefined array key 1 in C:\Users\pin-d\Local Sites\tutorial-college\app\public\wp-includes\class-wp-query.php on line 3609
