@@ -38,9 +38,7 @@ while (have_posts()) {
       <?php } ?>
 
       <div class="generic-content">
-         <?php print_r(have_posts()) ?>
-         <?php print_r(the_post()) ?>
-         <?php echo the_content(); ?>
+         <?php echo get_the_content(); ?>
       </div>
 
    </div>
